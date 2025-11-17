@@ -17,26 +17,33 @@ body {
 }
 
 
+
 .sidebar {
   border-right: 1px solid #ddd;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
   color: #7a5af8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
 }
 
 .sidebar nav a {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: #333;
-  padding: 0.8rem 0;
+  padding: 0.8rem 0.5rem;
   text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
 }
 
 .sidebar nav a:hover {
+  background: #f3f0ff;
   color: #7a5af8;
 }
 
@@ -53,16 +60,10 @@ body {
   background: #7a5af8;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 20px;
   cursor: pointer;
-  font-weight: bold;
-  width: 100%;
-}
-
-.btn.small {
-  padding: 6px 14px;
-  width: auto;
+  font-weight: 600;
 }
 
 
@@ -79,6 +80,14 @@ body {
   padding-bottom: 1rem;
 }
 
+.post-box img {
+  width: 35px;
+  height: 35px;
+  background: #c3d9fe;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
 .post-box input {
   flex: 1;
   border: none;
@@ -89,6 +98,14 @@ body {
 
 .posts {
   margin-top: 1rem;
+}
+
+.post-avatar {
+  width: 35px;
+  height: 35px;
+  background: #c3d9fe;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .post {
@@ -127,55 +144,97 @@ body {
 
 
 .rightbar {
-  padding: 1rem;
-}
-
-.search-box {
-  position: relative;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 8px 30px 8px 10px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-}
-
-.search-box i {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  color: #888;
-}
-
-.suggestions, .trends {
-  background: #f7f7f7;
+  /* Background Putih */
+  background-color: white;
+  /* Font Hitam */
+  color: #333;
+  padding: 20px;
   border-radius: 10px;
-  padding: 1rem;
-  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.suggestions h3, .trends h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
+.rewards-title {
+  color: #000;
+  margin-top: 0;
+  font-size: 1.6em;
+  font-weight: 700;
 }
 
-.suggestions ul, .trends ul {
-  list-style: none;
+.rewards-description {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.4;
 }
 
-.suggestions li, .trends li {
+
+/* --- REWARDS ITEM STYLING --- */
+.rewards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Jarak antar item lebih rapat */
+}
+
+.leaderboard-item {
+  /* Gaya blok putih dengan border abu-abu */
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.2s ease;
 }
 
-.suggestions button {
-  background: #7a5af8;
-  color: white;
-  border: none;
-  padding: 4px 10px;
-  border-radius: 10px;
+.leaderboard-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rank-info {
+  display: flex;
+  align-items: center;
+  /* Merapikan rank number dan username */
+}
+
+.rank-number {
+  font-weight: 700;
+  color: #000;
+  font-size: 1.1em;
+  min-width: 40px;
+  /* Menjaga lebar kolom rank tetap konsisten */
+  margin-right: 15px;
+}
+
+.username-acc {
+  font-weight: 600;
+  /* Username lebih tebal */
+  color: #000;
+  font-size: 1em;
+  /* Teks username menggantikan label 'place' */
+}
+
+.reward-amount {
+  font-weight: 700;
+  font-size: 1.3em;
+  color: #000;
+}
+
+/* Specific styling for Top 3 (menambahkan highlight warna) */
+.rank-1 {
+  border: 2px solid gold;
+  background-color: #fffaf0;
+  /* Sedikit latar belakang kuning muda */
+}
+
+.rank-2 {
+  border: 2px solid silver;
+}
+
+.rank-3 {
+  border: 2px solid #cd7f32;
+  /* Bronze color */
 }
 
 
@@ -183,14 +242,17 @@ body {
   .container {
     grid-template-columns: 80px 1fr;
   }
+
   .sidebar nav a span,
   .logo,
   .rightbar {
     display: none;
   }
+
   .sidebar nav a {
     justify-content: center;
   }
+
   .btn {
     display: none;
   }
@@ -200,6 +262,7 @@ body {
   .container {
     grid-template-columns: 1fr;
   }
+
   .sidebar {
     position: fixed;
     bottom: 0;
@@ -210,9 +273,11 @@ body {
     display: flex;
     justify-content: space-around;
   }
+
   .main-content {
     margin-bottom: 60px;
   }
+
   .rightbar {
     display: none;
   }

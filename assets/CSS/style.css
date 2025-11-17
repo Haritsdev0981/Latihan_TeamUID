@@ -82,38 +82,67 @@ body {
   background-color: var(--primary);
   color: white;
   text-align: center;
-  padding: 7rem 1.5rem 6rem;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  padding: 11rem 1.5rem 0; /* Hilangkan padding bawah besar */
+  position: relative;
+  overflow: hidden;
 }
 
+.hero-content {
+  padding-bottom: 10rem; /* Kasih jarak biar teks gak ketimpa wave */
+}
 
 .hero-content h2 {
   font-size: 1.8rem;
-  max-width: 600px;
+  max-width: 740px;
   margin: 0 auto 1rem;
 }
 
 .hero-content p {
-  max-width: 600px;
+  max-width: 740px;
   margin: 0 auto;
   font-size: 0.95rem;
 }
 
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+}
+
+
 /* Featured */
 .featured {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  background: #f9f9fb;
   color: var(--text-light);
+}
+
+.featured p{
+  font-size: 12px;
+  margin-bottom: 33px;
 }
 
 .featured .logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   margin-top: 0.5rem;
   font-weight: 500;
+}
+
+.featured .logos span{
+  margin-bottom: 0.75rem;
 }
 
 /* Features */
@@ -121,6 +150,12 @@ body {
   max-width: 1100px;
   margin: auto;
   padding: 16px 16px 10px 16px;
+}
+
+.container-cos {
+  max-width: 1100px;
+  margin: auto;
+  padding: 86px 16px 80px 16px;
 }
 
 .features {

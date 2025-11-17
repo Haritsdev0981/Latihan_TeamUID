@@ -193,52 +193,97 @@ body {
 
 /* RIGHTBAR */
 .rightbar {
-  padding: 1.5rem 1rem;
-}
-
-.search-box {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 8px 35px 8px 12px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-}
-
-.search-box i {
-  position: absolute;
-  right: 12px;
-  top: 10px;
-  color: #777;
-}
-
-.suggestions, .trends {
-  background: #f8f8f8;
+  /* Background Putih */
+  background-color: white;
+  /* Font Hitam */
+  color: #333;
+  padding: 20px;
   border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.suggestions h3, .trends h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+.rewards-title {
+  color: #000;
+  margin-top: 0;
+  font-size: 1.6em;
+  font-weight: 700;
 }
 
-.suggestions li, .trends li {
+.rewards-description {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+
+/* --- REWARDS ITEM STYLING --- */
+.rewards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Jarak antar item lebih rapat */
+}
+
+.leaderboard-item {
+  /* Gaya blok putih dengan border abu-abu */
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.2s ease;
 }
 
-.suggestions button {
-  background: #7a5af8;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 4px 10px;
+.leaderboard-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rank-info {
+  display: flex;
+  align-items: center;
+  /* Merapikan rank number dan username */
+}
+
+.rank-number {
+  font-weight: 700;
+  color: #000;
+  font-size: 1.1em;
+  min-width: 40px;
+  /* Menjaga lebar kolom rank tetap konsisten */
+  margin-right: 15px;
+}
+
+.username-acc {
+  font-weight: 600;
+  /* Username lebih tebal */
+  color: #000;
+  font-size: 1em;
+  /* Teks username menggantikan label 'place' */
+}
+
+.reward-amount {
+  font-weight: 700;
+  font-size: 1.3em;
+  color: #000;
+}
+
+/* Specific styling for Top 3 (menambahkan highlight warna) */
+.rank-1 {
+  border: 2px solid gold;
+  background-color: #fffaf0;
+  /* Sedikit latar belakang kuning muda */
+}
+
+.rank-2 {
+  border: 2px solid silver;
+}
+
+.rank-3 {
+  border: 2px solid #cd7f32;
+  /* Bronze color */
 }
 
 /* RESPONSIVE */
