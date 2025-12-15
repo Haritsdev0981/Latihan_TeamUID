@@ -1,31 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glow-in</title>
-  <link rel="stylesheet" href="/assets/CSS/growincss.css">
+  <link rel="stylesheet" href="/assets/CSS/feed.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
   <div class="container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h2 class="logo">glow-in</h2>
-      <nav>
-        <a href="/home.html"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="/feed.html"><i class="fa-solid fa-compass"></i> Explore</a>
-        <a href="#"><i class="fa-solid fa-bell"></i> Notifications </a>
-        <a href="/chat.html"><i class="fa-solid fa-envelope"></i> Messages <span class="badge">3</span></a>
-        <a href="/profile.html"><i class="fa-solid fa-user"></i> Profile</a>
-        <a href="#"><i class="fa-solid fa-ellipsis"></i> More</a>
-      </nav>
-      <button class="btn">Glow-in</button>
-    </aside>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <!-- <i class="fab fa-x-twitter"></i> -->
+       <p>Glow-in</p>
+    </div>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      <header class="post-box">
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item active">
+          <a href="#">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Explore</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa-solid fa-bell"></i>
+            <span>Notifications</span>
+            <span class="badge">20+</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Messages</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa-solid fa-ellipsis-h"></i>
+            <span>More</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="post-button">Post</button>
+
+    <div class="profile-minibar">
+      <div class="profile-info">
+        <div class="avatar"></div>
+        <div>
+          <p class="name">xuzi kolo</p>
+          <p class="handle">@rishaaaaa</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-ellipsis-h"></i>
+    </div>
+  </div>
+
+  <main class="main-content">
+     <header class="post-box">
         <input type="text" placeholder="What happening today?">
         <i class="fa-solid fa-magnifying-glass"></i>
       </header>
@@ -88,60 +142,36 @@
         </article>
 
       </section>
-    </main>
+  </main>
+  
+  <aside class="right-sidebar">
+      <div class="trending-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search" aria-label="Search">
+      </div>
 
-    <aside class="rightbar">
-      <div class="rewards-wrapper">
-        <h3 class="rewards-title">🏆 Monthly Rewards</h3>
-        <p class="rewards-description">
-            At the end of each month, the top 10 winners
-            on our leaderboard receive points rewards
-            based on their ranking.
-        </p>
+      <div class="trending-box">
+        <h4>Subscribe to Premium</h4>
+        <p>Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
+        <button class="subscribe-button">Subscribe</button>
+      </div>
 
-        <section class="rewards-list">
-            <div class="leaderboard-item rank-1">
-                <div class="rank-info">
-                    <span class="rank-number">1</span>
-                    <span class="username-acc">Aripbagus</span> 
-                </div>
-                <div class="reward-amount">1000</div>
-            </div>
-
-            <div class="leaderboard-item rank-2">
-                <div class="rank-info">
-                    <span class="rank-number">2</span>
-                    <span class="username-acc">alphakianna</span>
-                </div>
-                <div class="reward-amount">900</div>
-            </div>
-            
-            <div class="leaderboard-item rank-3">
-                <div class="rank-info">
-                    <span class="rank-number">3</span>
-                    <span class="username-acc">lubin300</span>
-                </div>
-                <div class="reward-amount">800</div>
-            </div>
-
-            <div class="leaderboard-item">
-                <div class="rank-info">
-                    <span class="rank-number">4</span>
-                    <span class="username-acc">SammieLee</span>
-                </div>
-                <div class="reward-amount">700</div>
-            </div>
-            <div class="leaderboard-item">
-                <div class="rank-info">
-                    <span class="rank-number">5</span>
-                    <span class="username-acc">Gamer5five</span>
-                </div>
-                <div class="reward-amount">600</div>
-            
-        </section>
-        
-    </div>
+      <div class="trending-box">
+        <h4>What's happening</h4>
+        <div class="trend-item">
+          <p class="trend-category">Trending in Indonesia</p>
+          <p class="trend-title">Pagli</p>
+          <p class="trend-count">4,005 posts</p>
+        </div>
+        <div class="trend-item">
+          <p class="trend-category">Music · Trending</p>
+          <p class="trend-title">Are You Sure</p>
+          <p class="trend-count">84K posts</p>
+        </div>
+      </div>
     </aside>
+
   </div>
 </body>
+
 </html>
