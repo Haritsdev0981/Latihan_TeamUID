@@ -5,135 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat UI - Messages</title>
   <link rel="stylesheet" href="/assets/CSS/chat.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <div class="sidebar">
-    <div class="sidebar-header">
-      <h2>Messages</h2>
-      <div class="search-bar">
-        <span>&#x1F50D;</span> 
-      </div>
-    </div>
+  <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
 
-    <div class="sidebar-menu">
-      <div class="nav-item active">All messages</div>
-      <div class="nav-item">Unread</div>
-      <div class="nav-item">Favorites</div>
-    </div>
-    
-    <div class="chat-smart-btn">
-        ✨ Chat smarter with Glow-In!
-    </div>
-
-    <div class="contact-list">
-        <div class="contact-item active">
-            <div class="avatar-sm"></div>
-            <div class="contact-info">
-                <div class="contact-name">Glow-In</div>
-                <div class="last-message">Chat with Glow-In - Experience...</div>
+    <div id="app-container">
+        <aside id="leftbar">
+            <div class="leftbar-header">
+                <div class="logo">Glow-in</div>
+                <label for="menu-toggle" class="close-btn" aria-label="Tutup Menu">
+                    <i class="fas fa-times"></i>
+                </label>
             </div>
-            <div class="time">13:08</div>
-        </div>
-        
-        <div class="contact-item">
-            <div class="avatar-sm"></div>
-            <div class="contact-info">
-                <div class="contact-name">Anna Johnson</div>
-                <div class="last-message">Hey! How's it going today? I've been...</div>
+
+            <nav class="leftbar-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-compass"></i> Explore</a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li class="active"><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                    <li><a href="#"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                </ul>
+            </nav>
+            <button class="post-btn">Post</button>
+
+            <div class="leftbar-footer">
+                <i class="fas fa-circle-user user-avatar-icon"></i>
+                <div class="user-info">
+                    <div class="username">xuzi kolo</div>
+                    <div class="handle">@trishaaaaa</div>
+                </div>
             </div>
-            <div class="time">09:15 AM</div>
-            <div class="unread-count">4</div>
-        </div>
-        <div class="contact-item">
-            <div class="avatar-sm"></div>
-            <div class="contact-info">
-                <div class="contact-name">Brian Carter</div>
-                <div class="last-message">Can you help me figure this out? I've be...</div>
-            </div>
-            <div class="time">09:22 AM</div>
-        </div>
-        </div>
+        </aside>
 
-    <div class="footer-sidebar">
-        Design by Team 8
+        <main id="main-content">
+            <section class="messages-list-panel">
+              <div class="main-header">
+                <label for="menu-toggle" class="menu-toggle-btn" aria-label="Buka Menu">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <h1 class="panel-title">Messages</h1>
+              </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search chats...">
+                </div>
+                <a href="./chatprew.html" class="smart-chat-button">Chat Smarter with Glow-in</a>
+
+                <div class="chat-list">
+                    <div class="chat-item selected">
+                        <div class="avatar online"></div>
+                        <div class="chat-info">
+                            <div class="chat-name">Alice Johnson</div>
+                            <div class="chat-preview">Hey, are you free for a call lat...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="time">2h ago</div>
+                            <div class="badge">2</div>
+                        </div>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-info">
+                            <div class="chat-name">David Lee</div>
+                            <div class="chat-preview">Sounds good! I'll check the n...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="time">Yesterday</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-info">
+                            <div class="chat-name">Sophia Garcia</div>
+                            <div class="chat-preview">Okay, I've sent the updated br...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="time">Mon</div>
+                        </div>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-info">
+                            <div class="chat-name">Liam Miller</div>
+                            <div class="chat-preview">Can we review the project sco...</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="time">Sun</div>
+                            <div class="badge">1</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-info">
+                            <div class="chat-name">Emily White</div>
+                            <div class="chat-preview">Got it! Thanks for the heads up.</div>
+                        </div>
+                        <div class="chat-meta">
+                            <div class="time">1 week ago</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chat-view-panel">
+                <header class="chat-header">
+                    <div class="avatar online"></div>
+                    <div class="chat-header-info">
+                        <div class="chat-name">Alice Johnson</div>
+                        <div class="status">Online</div>
+                    </div>
+                    <span class="more-icon">...</span>
+                </header>
+
+                <div class="conversation-area">
+                    
+                    <div class="message outgoing">
+                        <p>Hey Alice, are you free for a call later today to discuss the project?</p>
+                        <div class="time">2:30 PM</div>
+                    </div>
+
+                    <div class="message incoming">
+                        <div class="avatar-message"></div>
+                        <div class="d-flex">
+                          <p>Hi! Yes, I should be free after 4 PM. What's on your mind?</p>
+                        <div class="time">2:35 PM</div>
+                        </div>
+                    </div>
+                    
+                    <div class="message outgoing">
+                        <p>Great! I wanted to go over the final presentation slides and some feedback from the client.</p>
+                        <div class="time">2:40 PM</div>
+                    </div>
+
+                    <div class="message incoming">
+                        <div class="avatar-message"></div>
+                        <div class="d-flex">
+                          <p>Okay, sounds important. I'll make sure to block out some time. Could you send me the latest version of the slides beforehand?</p>
+                          <div class="time">2:42 PM</div>
+                        </div>
+                    </div>
+                    
+                    <div class="message outgoing">
+                        <p>Absolutely! I'll send them over in a few minutes. Is 4:30 PM good for you?</p>
+                        <div class="time">2:45 PM</div>
+                    </div>
+                    
+                    <div class="message incoming">
+                        <div class="avatar-message"></div>
+                        <div class="d-flex">
+                          <p>Yes, 4:30 PM works perfectly. Looking forward to it!</p>
+                          <div class="time">2:46 PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-input-area">
+                    <input type="text" placeholder="Type your message here...">
+                    <button class="send-button"><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+            </section>
+        </main>
     </div>
-  </div>
 
-  <div class="chat-panel">
-    <div class="chat-header">
-      <div class="header-title">
-        Glow-In
-        <p>Chat with Glow-In - Experience the power of AI with us</p>
-      </div>
-      <div class="header-icons">
-          <span>&#x2699;</span> 
-          <span>&#x1F514;</span> 
-      </div>
-    </div>
-
-    <div class="chat-content">
-      <div class="message right">
-        <div class="message-bubble">
-          Hi Sunday AI, I want to create an image of "mountains in the morning with fog." Can you help?
-        </div>
-        <div class="message-time">13:08</div>
-      </div>
-      
-      <div class="message left">
-        <div class="avatar-chat"></div>
-        <div class="message-details">
-            <div class="message-bubble">
-              Of course! Here's the concept I'll use: - **Theme:** Mountains in the morning. - **Details:** Fog covering the slopes, an orange-golden sky, and lush green trees. - **Style:** Realistic or semi-illustrative? Do you have any additional preferences?
-            </div>
-            <div class="message-actions">
-                <span class="like-btn">&#x1F44D;</span>
-                <span class="dislike-btn">&#x1F44E;</span>
-                <div class="message-time">15:09</div>
-            </div>
-        </div>
-      </div>
-      
-      <div class="message right">
-        <div class="message-bubble">
-          Let's go with semi-illustrative. Also, add some small birds in the sky.
-        </div>
-        <div class="message-time">15:10</div>
-      </div>
-
-      <div class="message left">
-        <div class="avatar-chat"></div>
-        <div class="message-details">
-            <div class="message-bubble">
-              Got it! I'll create an image with mountains in the morning, fog covering the landscape, an orange sky, and small birds flying in the distance, in a semi-illustrative style.
-            </div>
-            <div class="message-actions">
-                <span class="like-btn">&#x1F44D;</span>
-                <span class="dislike-btn">&#x1F44E;</span>
-                <div class="message-time">15:11</div>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="chat-input">
-        <div class="input-container">
-            <input type="text" placeholder="Let's ask Sunday AI...">
-            <span class="star-icon">&#x2B50;</span>
-        </div>
-    </div>
-  </div>
-
-  <div class="right-panel">
-    <div class="ai-avatar-lg">
-        <img src="/assets/IMG/jaki.jpg" alt="">
-    </div>
-    
-    <div class="status-indicator">
-        <span class="dot"></span> Listening...
-    </div>
-
-    <h3>How can I help you today?</h3>
-    <p>Ready to help you!</p>
-  </div>
+    <label for="menu-toggle" id="overlay"></label>
 </body>
 </html>

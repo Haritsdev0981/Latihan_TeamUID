@@ -1,286 +1,473 @@
+:root {
+    --primary-color: #ff8c00; 
+    --light-bg: #ffffff;
+    --dark-text: #1a1a1a;
+    --light-gray: #f3efea;
+    ---gray: #FAFAFA;
+    --light-hover: #A0BBE2;
+    --border-color: #e0e0e0;
+    --leftbar-width-desktop: 280px;
+    --rightbar-width-desktop: 350px;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background: #fff;
-  color: #111;
+    font-family: Arial, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+    height: 100vh; 
+    overflow: hidden;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 250px 1fr 300px;
-  min-height: 100vh;
+.hidden-checkbox {
+    display: none;
 }
 
-.sidebar {
-  border-right: 1px solid #ddd;
-  padding: 1.5rem 1rem;
-  display: flex;
-  flex-direction: column;
+#app-container {
+    display: grid;
+    grid-template-columns: var(--leftbar-width-desktop) 1fr var(--rightbar-width-desktop);
+    height: 100vh; 
+    max-width: 1300px; 
+    margin: 0 auto;
+    position: relative; 
+}
+
+#leftbar {
+    background-color: var(--light-bg);
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--leftbar-width-desktop);
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
 }
 
 .logo {
-  color: #7a5af8;
-  margin-bottom: 2rem;
-  text-transform: capitalize;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-.sidebar nav a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #333;
-  padding: 0.8rem 0.5rem;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.2s;
+.leftbar-header {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-.sidebar nav a:hover {
-  background: #f3f0ff;
-  color: #7a5af8;
+.leftbar-nav ul {
+    list-style: none;
 }
 
-.badge {
-  background: #7a5af8;
-  color: #fff;
-  border-radius: 12px;
-  padding: 2px 6px;
-  font-size: 10px;
-  margin-left: auto;
+.leftbar-nav li {
+    margin-bottom: 10px;
 }
 
-.btn {
-  background: #7a5af8;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
+.leftbar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
 }
 
-
-.main-content {
-  border-right: 1px solid #ddd;
-  padding: 1rem;
+.leftbar-nav a i {
+    margin-right: 15px;
+    width: 20px;
 }
 
-.post-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
+.leftbar-nav li.active a, .leftbar-nav a:hover {
+    background-color: color-mix(in srgb, var(--light-hover) 20%, transparent);
+    font-weight: normal;
+    color: var(--primary-color);
 }
 
-.post-box img {
-  width: 35px;
-  height: 35px;
-  background: #c3d9fe;
-  border-radius: 50%;
-  flex-shrink: 0;
+.post-btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
 }
 
-.post-box input {
-  flex: 1;
-  border: none;
-  font-size: 1rem;
-  outline: none;
+.leftbar-footer {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+.user-avatar-icon { 
+    font-size: 40px; 
+    margin-right: 10px;
+    color: #ccc;
+}
+.leftbar-footer .username { font-weight: bold; font-size: 14px; }
+.leftbar-footer .handle { font-size: 12px; color: #888; }
+
+.menu-toggle-btn, .close-btn { 
+    display: none;
 }
 
-
-.posts {
-  margin-top: 1rem;
+#main-content {
+    padding: 0;
+    overflow-y: auto;
+    grid-column: 2;
+    height: 100vh;
 }
 
-.post-avatar {
-  width: 35px;
-  height: 35px;
-  background: #c3d9fe;
-  border-radius: 50%;
-  flex-shrink: 0;
+.main-header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - var(--leftbar-width-desktop) - var(--rightbar-width-desktop));
+    left: var(--leftbar-width-desktop);
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    height: 60px;
+    align-items: center;
+}
+
+.main-nav-tabs {
+    display: flex;
+    max-width: 500px;
+    margin-left: 20px;
+}
+
+.main-nav-tabs .tab {
+    padding: 15px 30px;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-nav-tabs .tab.active {
+    font-weight: bold;
+    border-bottom: 3px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.search-bar-desktop {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; 
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    color: #888;
+}
+.search-bar-desktop i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+.search-bar-desktop input {
+    border: none;
+    padding: 0;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+/* KONTEN FEED DAN POST CARD */
+.feed {
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 .post {
-  display: flex;
-  gap: 10px;
-  padding: 1rem 0;
-  border-bottom: 1px solid #eee;
+    background-color: var(--light-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 15px; /* Jarak antar postingan */
+    padding: 20px;
 }
-
-.post-link{
-  text-decoration: none;
-}
-
-.post h4 {
-  font-size: 0.9rem;
-}
-
-.post span {
-  color: gray;
-  font-weight: normal;
-}
-
-.post p {
-  margin: 6px 0;
-}
-
-.post-img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-top: 8px;
-}
-
-.post-actions {
-  display: flex;
-  gap: 15px;
-  margin-top: 6px;
-  color: gray;
-  font-size: 0.9rem;
-}
-
-
-.rightbar {
-  /* Background Putih */
-  background-color: white;
-  /* Font Hitam */
-  color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.rewards-title {
-  color: #000;
-  margin-top: 0;
-  font-size: 1.6em;
-  font-weight: 700;
-}
-
-.rewards-description {
-  font-size: 0.85em;
-  color: #666;
-  margin-bottom: 30px;
-  line-height: 1.4;
-}
-
-
-/* --- REWARDS ITEM STYLING --- */
-.rewards-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  /* Jarak antar item lebih rapat */
-}
-
-.leaderboard-item {
-  /* Gaya blok putih dengan border abu-abu */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid #ddd;
-  transition: box-shadow 0.2s ease;
-}
-
-.leaderboard-item:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.rank-info {
-  display: flex;
-  align-items: center;
-  /* Merapikan rank number dan username */
-}
-
-.rank-number {
-  font-weight: 700;
-  color: #000;
-  font-size: 1.1em;
-  min-width: 40px;
-  /* Menjaga lebar kolom rank tetap konsisten */
-  margin-right: 15px;
-}
-
-.username-acc {
-  font-weight: 600;
-  /* Username lebih tebal */
-  color: #000;
-  font-size: 1em;
-  /* Teks username menggantikan label 'place' */
-}
-
-.reward-amount {
-  font-weight: 700;
-  font-size: 1.3em;
-  color: #000;
-}
-
-/* Specific styling for Top 3 (menambahkan highlight warna) */
-.rank-1 {
-  border: 2px solid gold;
-  background-color: #fffaf0;
-  /* Sedikit latar belakang kuning muda */
-}
-
-.rank-2 {
-  border: 2px solid silver;
-}
-
-.rank-3 {
-  border: 2px solid #cd7f32;
-  /* Bronze color */
-}
-
-
-@media (max-width: 1024px) {
-  .container {
-    grid-template-columns: 80px 1fr;
-  }
-
-  .sidebar nav a span,
-  .logo,
-  .rightbar {
-    display: none;
-  }
-
-  .sidebar nav a {
-    justify-content: center;
-  }
-
-  .btn {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top: 1px solid #ddd;
+.post-header {
     display: flex;
-    justify-content: space-around;
-  }
+    align-items: center;
+    margin-bottom: 15px;
+    /* background: blue; */
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+}
 
-  .main-content {
-    margin-bottom: 60px;
-  }
+.post-header-content{
+    /* background: red; */
+    padding-left: 6px;
+    display: flex;
+    flex-direction: column;
+}
 
-  .rightbar {
+.post-header-content .username{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.post-header-content .handle{
+    font-size: 0.875em;
+}
+
+.timestamp{
+    font-size: 0.875em;
+}
+
+.post-text{
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+.post-header .avatar {
+    font-size: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.post-header-profile {
+    width: 40px;
+    height: 40px;        
+    border-radius: 50%; 
+    object-fit: cover;   
+}
+
+.post-media-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f0f0f0;
+    background-image: url('https://images.unsplash.com/photo-1763046287602-7f878927101f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+.post-actions {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    justify-content: space-between;
+    color: #888;
+    padding-top: 20px; /* Jarak antara text/media dan action buttons */
+}
+
+
+#rightbar {
+    background-color: var(---gray);
+    border-left: 1px solid var(--border-color);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: var(--rightbar-width-desktop);
+    height: 100vh;
+    padding: 20px; /* Padding utama untuk konten Rightbar */
+    z-index: 50;
+    overflow-y: auto;
+}
+
+.rightbar-content {
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 12px;
+}
+
+.rightbar-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+}
+
+/* Penyesuaian Tabel Leaderboard */
+.leaderboard-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; /* Tambah jarak ke tombol */
+}
+.leaderboard-table tr { 
+    line-height: 2.5; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.leaderboard-table td:first-child { 
+    display: flex; 
+    align-items: center; 
+    font-size: 14px;
+}
+.leaderboard-table .avatar-sm-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ccc;
+}
+.leaderboard-table .pts { 
+    font-weight: 500; /* Sedikit kurang tebal */
+    font-size: 14px;
+    color: #666; /* Warna yang lebih soft */
+}
+
+.view-leaderboard-btn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.view-leaderboard-btn:hover {
+    color: var(--light-bg);
+    background-color: var(--primary-color);
+}
+
+.leaderboard-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+.leaderboard-table tr { line-height: 2.5; }
+.leaderboard-table td:first-child { display: flex; align-items: center; }
+.leaderboard-table .avatar-sm-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ccc;
+}
+.leaderboard-table .pts { font-weight: bold; text-align: right; }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90; 
     display: none;
-  }
+    cursor: pointer;
+}
+
+#leftbar {
+    transition: transform 0.3s ease-out;
+}
+
+@media (max-width: 900px) {
+    #rightbar {
+        display: none;
+    }
+
+    #main-content {
+        padding: 0; 
+        grid-column: 1;
+        background-color: var(--light-bg); /* Kembalikan warna ke putih di mobile */
+    }
+
+    #app-container {
+        grid-template-columns: 1fr; 
+    }
+    
+    body {
+        overflow-y: auto; 
+    }
+    
+    #leftbar {
+        position: fixed; /* Pastikan Leftbar fixed di mobile */
+        width: 280px; 
+        transform: translateX(-100%);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .leftbar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .leftbar-footer, .post-btn {
+        display: none;
+    }
+    
+    .menu-toggle-btn {
+        display: block; 
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .close-btn {
+        display: block;
+        font-size: 24px;
+        color: #888;
+        cursor: pointer;
+    }
+    
+    /* KEMBALIKAN HEADER KE POSISI NORMAL */
+    .main-header {
+        position: initial;
+        width: 100%;
+        left: 0;
+        max-width: 100%;
+
+        padding: 0 15px;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .search-bar-desktop {
+        display: none;
+    }
+    .main-nav-tabs {
+        margin-left: 0;
+        justify-content: space-around;
+        flex-grow: 1;
+        border-bottom: none;
+    }
+    .main-nav-tabs .tab {
+        padding: 15px 10px;
+    }
+
+    /* Hapus padding-top yang diterapkan untuk mengatasi fixed header di mobile */
+    .feed {
+        padding-top: 0;
+    }
+
+    /* KEMBALIKAN STYLE POST DI MOBILE (Tanpa border) */
+    .post {
+        margin-bottom: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--border-color); /* Kembali ke border-bottom */
+        background-color: var(--light-bg);
+        padding: 20px 20px;
+    }
+    .feed {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #menu-toggle:checked ~ #app-container #leftbar {
+        transform: translateX(0);
+    }
+    
+    #menu-toggle:checked ~ #overlay {
+        display: block; 
+    }
 }
