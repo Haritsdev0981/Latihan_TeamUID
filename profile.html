@@ -1,121 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glow-In Profile</title>
-  <link rel="stylesheet" href="/assets/CSS/profile.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow-in Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+    <div class="layout">
+        <aside class="sidebar-left">
+            <div class="logo">
+                <i class="fa-solid fa-message logo-icon"></i>
+                <span>Glow-in</span>
+            </div>
+        
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">20+</span>
+                    </div>
+                    <span>Notifications</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Leaderboard</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <button class="post-btn">Post</button>
+            <div class="user-profile-mini">
+                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" alt="Profile" class="avatar-mini">
+                <div class="user-info-mini">
+                    <div class="name">PSD Zone</div>
+                    <div class="handle">@psd_zone.</div>
+                </div>
+                <i class="fa-solid fa-ellipsis menu-dots"></i>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <button class="back-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <h1>Profile</h1>
+            </header>
+
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-cover">
+                        <img src="https://images.unsplash.com/photo-1505839673365-e3971f8d9184?auto=format&fit=crop&w=1400&q=80" alt="Cover">
+                    </div>
+                    <div class="profile-inner">
+                        <div class="profile-header">
+                            <img class="avatar-large" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" alt="Avatar">
+                            <div class="profile-info">
+                                <div class="profile-name-row">
+                                    <span class="profile-name">PSD Zone</span>
+                                    <i class="fa-solid fa-circle-check verified-badge"></i>
+                                </div>
+                                <div class="profile-handle">@psd_zone</div>
+                            </div>
+                            <div class="profile-actions">
+                                <button class="btn btn-message">Message</button>
+                                <button class="btn btn-follow">Follow</button>
+                            </div>
+                        </div>
     
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h2 class="logo">glow-in</h2>
-      <nav>
-        <a href="/home.html"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="#"><i class="fa-solid fa-compass"></i> Explore</a>
-        <a href="#"><i class="fa-solid fa-bell"></i> Notifications </a>
-        <a href="/chat.html"><i class="fa-solid fa-envelope"></i> Messages <span class="badge">3</span></a>
-        <a href="/profile.html"><i class="fa-solid fa-user"></i> Profile</a>
-        <a href="#"><i class="fa-solid fa-ellipsis"></i> More</a>
-      </nav>
-      <button class="btn">Glow-in</button>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      <section class="profile-header">
-        <div class="profile-cover"></div>
-        <div class="profile-details">
-          <img src="https://i.pinimg.com/736x/22/17/5e/22175efa54b9f0f4315c590045fa43f5.jpg" alt="Profile Picture" class="avatar">
-          <div class="info">
-            <h2>PSD Zone <i class="fa-solid fa-circle-check"></i></h2>
-            <p>@psd_zone</p>
-            <p class="bio">Download Free Exclusive PSD Files, PSD graphics, PSD Templates, PSD backgrounds and many PhotoShop resources.</p>
-            <p class="meta"><i class="fa-solid fa-location-dot"></i> Freiburg, Germany · <i class="fa-regular fa-calendar"></i> Joined August 2022</p>
-          </div>
-          <button class="follow-btn">Follow</button>
-        </div>
-      </section>
-
-      <div class="tabs">
-        <button class="active">Tweets</button>
-        <button>Tweets & replies</button>
-        <button>Media</button>
-        <button>Likes</button>
-      </div>
-
-      <!-- POST -->
-      <article class="tweet">
-        <img src="https://i.pinimg.com/736x/22/17/5e/22175efa54b9f0f4315c590045fa43f5.jpg" class="tweet-avatar" alt="avatar">
-        <div class="tweet-content">
-          <h4>PSD Zone <span>@psd_zone · 22h</span></h4>
-          <p>Download Free Exclusive PSD Files, PSD graphics, PSD Templates, PSD backgrounds and many PhotoShop resources.</p>
-          <img src="https://i.pinimg.com/736x/ed/d7/36/edd73622646c51133ef8e47092f97e1e.jpg" class="tweet-image" alt="post image">
-          <div class="tweet-actions">
-            <span><i class="fa-regular fa-comment"></i> 78</span>
-            <span><i class="fa-solid fa-retweet"></i> 59</span>
-            <span><i class="fa-regular fa-heart"></i> 159</span>
-          </div>
-        </div>
-      </article>
-    </main>
-
-    <!-- RIGHTBAR -->
-    <aside class="rightbar">
-      <div class="rewards-wrapper">
-        <h3 class="rewards-title">🏆 Monthly Rewards</h3>
-        <p class="rewards-description">
-            At the end of each month, the top 10 winners
-            on our leaderboard receive points rewards
-            based on their ranking.
-        </p>
-
-        <section class="rewards-list">
-            <div class="leaderboard-item rank-1">
-                <div class="rank-info">
-                    <span class="rank-number">1</span>
-                    <span class="username-acc">Aripbagus</span> 
+                        <p class="profile-bio">
+                            Download Free Exclusive PSD Files, PSD graphics, PSD templates, PSD backgrounds and many Photoshop resources.
+                        </p>
+                        <div class="profile-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Joined August 2022</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Freiburg, Germany</span>
+                        </div>
+                        <div class="profile-stats">
+                            <span><span class="count">2,114</span> Following</span>
+                            <span><span class="count">98,400</span> Followers</span>
+                        </div>
+    
+                        <div class="profile-tabs">
+                            <a href="#" class="profile-tab active">Tweets</a>
+                            <a href="#" class="profile-tab">Tweets & replies</a>
+                            <a href="#" class="profile-tab">Media</a>
+                            <a href="#" class="profile-tab">Likes</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="reward-amount">1000</div>
-            </div>
-
-            <div class="leaderboard-item rank-2">
-                <div class="rank-info">
-                    <span class="rank-number">2</span>
-                    <span class="username-acc">alphakianna</span>
-                </div>
-                <div class="reward-amount">900</div>
-            </div>
             
-            <div class="leaderboard-item rank-3">
-                <div class="rank-info">
-                    <span class="rank-number">3</span>
-                    <span class="username-acc">lubin300</span>
-                </div>
-                <div class="reward-amount">800</div>
-            </div>
 
-            <div class="leaderboard-item">
-                <div class="rank-info">
-                    <span class="rank-number">4</span>
-                    <span class="username-acc">SammieLee</span>
-                </div>
-                <div class="reward-amount">700</div>
+                <article class="tweet-card">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" class="avatar" alt="PSD Zone">
+                        <div class="post-user-info">
+                            <div class="name">PSD Zone</div>
+                            <div class="handle">@psd_zone • 2h</div>
+                        </div>
+                    </div>
+                    <p class="post-body">Discover our latest collection of vibrant abstract backgrounds, perfect for your next design project.</p>
+                    <div class="tweet-media">
+                        <img src="https://i.pinimg.com/736x/c8/3d/fe/c83dfed69dcdb4d5cd385d90c4fbe0e6.jpg" alt="Abstract pack">
+                    </div>
+                    <div class="tweet-actions">
+                        <div class="item"><i class="fa-regular fa-heart"></i><span>770</span></div>
+                        <div class="item"><i class="fa-regular fa-comment"></i><span>67</span></div>
+                        <div class="item"><i class="fa-solid fa-retweet"></i><span>159</span></div>
+                        <div class="item"><i class="fa-solid fa-share-nodes"></i><span>12</span></div>
+                    </div>
+                </article>
+
+                <article class="tweet-card">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" class="avatar" alt="PSD Zone">
+                        <div class="post-user-info">
+                            <div class="name">PSD Zone</div>
+                            <div class="handle">@psd_zone • 1d</div>
+                        </div>
+                    </div>
+                    <p class="post-body">New free PSD mockups templates available. Present your designs professionally with these easy-to-use files.</p>
+                    <div class="tweet-media">
+                        <img src="https://i.pinimg.com/1200x/d9/d1/0f/d9d10f36ebaab4293f982bb5b934af1f.jpg" alt="Mockup pack">
+                    </div>
+                    <div class="tweet-actions">
+                        <div class="item"><i class="fa-regular fa-heart"></i><span>310</span></div>
+                        <div class="item"><i class="fa-regular fa-comment"></i><span>25</span></div>
+                        <div class="item"><i class="fa-solid fa-retweet"></i><span>98</span></div>
+                        <div class="item"><i class="fa-solid fa-share-nodes"></i><span>5</span></div>
+                    </div>
+                </article>
             </div>
-            <div class="leaderboard-item">
-                <div class="rank-info">
-                    <span class="rank-number">5</span>
-                    <span class="username-acc">Gamer5five</span>
-                </div>
-                <div class="reward-amount">600</div>
-            
-        </section>
+        </main>
+
+        <aside class="sidebar-right">
+            <div class="leaderboard-card">
+                <h3>Leaderboard</h3>
+                <ul class="leaderboard-list">
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="LunaStar">
+                        <span class="name">LunaStar</span>
+                        <span class="points">1250 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="PixelForge">
+                        <span class="name">PixelForge</span>
+                        <span class="points">1180 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="CodeWhisper">
+                        <span class="name">CodeWhisper</span>
+                        <span class="points">1020 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="DesignFlow">
+                        <span class="name">DesignFlow</span>
+                        <span class="points">950 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="DataPilot">
+                        <span class="name">DataPilot</span>
+                        <span class="points">880 pts</span>
+                    </li>
+                </ul>
+                <a href="#" class="view-full">View Full Leaderboard</a>
+            </div>
+        </aside>
     </div>
-    </aside>
-
-  </div>
 </body>
 </html>

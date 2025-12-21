@@ -1,145 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Page</title>
-    <link rel="stylesheet" href="/assets/CSS/detail.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-
+    <title>Glow-in Detail Page</title>
+    <link rel="stylesheet" href="detail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <div class="container">
-
-        <aside class="sidebar">
-            <h2 class="logo">glow-in</h2>
-            <nav>
-                <a href="/home.html"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="#"><i class="fa-solid fa-compass"></i> Explore</a>
-                <a href="#"><i class="fa-solid fa-bell"></i> Notifications </a>
-                <a href="/chat.html"><i class="fa-solid fa-envelope"></i> Messages <span class="badge">3</span></a>
-                <a href="/profile.html"><i class="fa-solid fa-user"></i> Profile</a>
-                <a href="#"><i class="fa-solid fa-ellipsis"></i> More</a>
+    <div class="layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <div class="logo">
+                <i class="fa-solid fa-message logo-icon"></i>
+                <span>Glow-in</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">20+</span>
+                    </div>
+                    <span>Notifications</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Leaderboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
             </nav>
-            <button class="btn">Glow-in</button>
-        </aside>
 
-        <main class="content">
+            <button class="post-btn">Post</button>
 
-            <header class="detail-header">
-                <a href="#" class="back-icon">←</a>
-                <div class="header-text">
-                    <h2>Detail</h2>
-                    <p class="tweet-count">74.5K Tweets</p>
+            <div class="user-profile-mini">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Profile" class="avatar-mini">
+                <div class="user-info-mini">
+                    <div class="name">xuzi kolo</div>
+                    <div class="handle">@rolhaa...</div>
                 </div>
-                <span class="verification-icon"></span>
-            </header>
-
-            <article class="post-card">
-
-                <header class="post-user">
-                    <img src="https://i.pinimg.com/1200x/91/4a/14/914a14904e624f8a48fafdc002848afb.jpg" class="avatar"
-                        alt="pfp">
-
-                    <div class="user-info">
-                        <p class="name">Harold</p>
-                        <p class="username">@harold</p>
-                    </div>
-
-                    <button class="report-button">Report</button>
-                </header>
-
-                <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade" class="post-img"
-                    alt="post">
-
-                <h3>Vacation is going great!</h3>
-                <p>
-                    this picture make me feels like going back to 2016 era,
-                    we might be in the same boat!
-                </p>
-
-
-
-                <section class="tags">
-                    <span>Travel</span>
-                    <span>DreamCity</span>
-                    <span>TakingPicture</span>
-                    <span>Sunset</span>
-                    <span>Holiday</span>
-                </section>
-
-                <footer class="post-footer">
-                    <p>2 hours ago</p>
-                    <p>12,890 views</p>
-                </footer>
-
-                <section class="actions">
-                    <div><i class="fa-regular fa-comment"></i> 2,345</div>
-                    <div><i class="fa-solid fa-retweet"></i> 187</div>
-                    <div><i class="fa-regular fa-heart"></i> 92</div>
-                </section>
-
-            </article>
-        </main>
-
-        <aside class="rightbar">
-            <div class="rewards-wrapper">
-                <h3 class="rewards-title">🏆 Monthly Rewards</h3>
-                <p class="rewards-description">
-                    At the end of each month, the top 10 winners
-                    on our leaderboard receive points rewards
-                    based on their ranking.
-                </p>
-
-                <section class="rewards-list">
-                    <div class="leaderboard-item rank-1">
-                        <div class="rank-info">
-                            <span class="rank-number">1</span>
-                            <span class="username-acc">JaneD0e_XyZ</span>
-                        </div>
-                        <div class="reward-amount">1000</div>
-                    </div>
-
-                    <div class="leaderboard-item rank-2">
-                        <div class="rank-info">
-                            <span class="rank-number">2</span>
-                            <span class="username-acc">Alpha_Kianna</span>
-                        </div>
-                        <div class="reward-amount">900</div>
-                    </div>
-
-                    <div class="leaderboard-item rank-3">
-                        <div class="rank-info">
-                            <span class="rank-number">3</span>
-                            <span class="username-acc">Lubin_3000</span>
-                        </div>
-                        <div class="reward-amount">800</div>
-                    </div>
-
-                    <div class="leaderboard-item">
-                        <div class="rank-info">
-                            <span class="rank-number">4</span>
-                            <span class="username-acc">SammieLee</span>
-                        </div>
-                        <div class="reward-amount">700</div>
-                    </div>
-                    <div class="leaderboard-item">
-                        <div class="rank-info">
-                            <span class="rank-number">5</span>
-                            <span class="username-acc">Gamer5five</span>
-                        </div>
-                        <div class="reward-amount">600</div>
-
-                </section>
-
+                <i class="fa-solid fa-ellipsis menu-dots"></i>
             </div>
         </aside>
 
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <button class="back-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <h1>Detail</h1>
+            </header>
+
+            <div class="post-card">
+                <div class="post-header">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Alex Johnson" class="avatar">
+                    <div class="post-user-info">
+                        <div class="name">Alex Johnson</div>
+                        <div class="handle">@AlexJohnson</div>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+
+                <div class="post-image-container">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Neo Tokyo Streets">
+                </div>
+
+                <h2 class="post-title">Exploring the Vibrant Streets of Neo-Tokyo</h2>
+                
+                <p class="post-body">
+                    Neo-Tokyo is a city that never sleeps, a sprawling metropolis where ancient traditions meet cutting-edge technology. Every corner reveals a new story, a vibrant tapestry of cultures, sounds, and flavors. From the neon-lit alleyways filled with street food vendors to the serene, futuristic gardens, there's always something new to discover. This post highlights some of my favorite moments from my recent trip, focusing on the breathtaking architecture and the warmth of the local community. The fusion of traditional Japanese aesthetics with cyberpunk influences creates a unique atmosphere unlike anywhere else in the world.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Travel</span>
+                    <span class="tag">CityLife</span>
+                    <span class="tag">Photography</span>
+                    <span class="tag">Culture</span>
+                    <span class="tag">Future</span>
+                </div>
+
+                <div class="post-meta">
+                    <span class="time">2 hours ago</span>
+                    <span class="dot">•</span>
+                    <span class="views">12,890 views</span>
+                    
+                    <div class="interactions">
+                        <div class="interaction-item">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>2,345</span>
+                        </div>
+                        <div class="interaction-item">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>187</span>
+                        </div>
+                        <div class="interaction-item">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>92</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <h3>Comments (187)</h3>
+                
+                <div class="comment">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Sophia Garcia" class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-name">Sophia Garcia</span>
+                            <span class="comment-handle">@soph_g</span>
+                            <span class="dot">•</span>
+                            <span class="comment-time">5 min ago</span>
+                        </div>
+                        <p class="comment-text">This city looks absolutely stunning! I love the blend of traditional and futuristic aesthetics. Must visit!</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Liam Miller" class="comment-avatar">
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-name">Liam Miller</span>
+                            <span class="comment-handle">@liam.m</span>
+                            <span class="dot">•</span>
+                            <span class="comment-time">1 hour ago</span>
+                        </div>
+                        <p class="comment-text">The architecture is incredible. Did you get to explore the neon-lit alleyways? I heard they are a unique experience.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar-right">
+            <div class="leaderboard-card">
+                <h3>Leaderboard</h3>
+                
+                <ul class="leaderboard-list">
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="LunaStar">
+                        <span class="name">LunaStar</span>
+                        <span class="points">1250 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="PixelForge">
+                        <span class="name">PixelForge</span>
+                        <span class="points">1180 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="CodeWhisper">
+                        <span class="name">CodeWhisper</span>
+                        <span class="points">1020 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="DesignFlow">
+                        <span class="name">DesignFlow</span>
+                        <span class="points">950 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="DataPilot">
+                        <span class="name">DataPilot</span>
+                        <span class="points">880 pts</span>
+                    </li>
+                </ul>
+
+                <a href="#" class="view-full">View Full Leaderboard</a>
+            </div>
+        </aside>
     </div>
-
 </body>
-
 </html>
