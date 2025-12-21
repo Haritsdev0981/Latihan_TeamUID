@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow-in Leaderboard</title>
+  <link rel="stylesheet" href="leaderboard.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">Glow-in</div>
+      <nav>
+        <a>Home</a>
+        <a>Explore</a>
+        <a>Notifications</a>
+        <a>Messages</a>
+        <a class="active">Leaderboard</a>
+        <a>Profile</a>
+      </nav>
+      <button class="post-btn">Post</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="content">
+      <h2 class="title">Global Leaderboard</h2>
+
+      <div class="filters">
+        <select><option>All Time</option></select>
+        <select><option>Top 10 Users</option></select>
+      </div>
+
+      <!-- User Rank Card -->
+      <div class="rank-card">
+        <div class="rank-left">
+          <span class="rank-number">125</span>
+          <div>
+            <p class="rank-label">Your Rank</p>
+            <p class="rank-name">You (John Doe)</p>
+          </div>
+        </div>
+        <div class="rank-points">4,500 points</div>
+      </div>
+
+      <!-- Table -->
+      <div class="table">
+        <div class="table-head">
+          <span>Rank</span>
+          <span>User</span>
+          <span class="right">Points</span>
+        </div>
+
+        <div class="row"><span>1</span><span class="user"><img src="avatar.png"/>Alex Johnson</span><span class="right">15,400</span></div>
+        <div class="row"><span>2</span><span class="user"><img src="avatar.png"/>Maria Gonzalez</span><span class="right">14,980</span></div>
+        <div class="row"><span>3</span><span class="user"><img src="avatar.png"/>David Lee</span><span class="right">14,500</span></div>
+        <div class="row"><span>4</span><span class="user"><img src="avatar.png"/>Sophia Chen</span><span class="right">13,800</span></div>
+        <div class="row"><span>5</span><span class="user"><img src="avatar.png"/>Ethan Wright</span><span class="right">13,200</span></div>
+        <div class="row"><span>6</span><span class="user"><img src="avatar.png"/>Olivia King</span><span class="right">12,900</span></div>
+        <div class="row"><span>7</span><span class="user"><img src="avatar.png"/>Noah Clark</span><span class="right">12,550</span></div>
+        <div class="row"><span>8</span><span class="user"><img src="avatar.png"/>Ava Davis</span><span class="right">12,100</span></div>
+        <div class="row"><span>9</span><span class="user"><img src="avatar.png"/>Liam Scott</span><span class="right">11,800</span></div>
+        <div class="row"><span>10</span><span class="user"><img src="avatar.png"/>Isabella Hill</span><span class="right">11,500</span></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

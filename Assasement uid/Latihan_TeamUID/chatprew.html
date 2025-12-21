@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sunday AI - Chat UI (Slicing)</title>
+  <link rel="stylesheet" href="/assets/CSS/chatprew.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <h1>Messages</h1>
+        <button class="search-btn" aria-label="search">🔍</button>
+      </header>
+
+      <nav class="sidebar-tabs">
+        <button class="tab active">All messages</button>
+        <button class="tab">Unread</button>
+        <button class="tab">Favorites</button>
+      </nav>
+
+      <div class="cta">
+        <button class="cta-btn">✨ Chat smarter with Sunday AI!</button>
+      </div>
+
+      <ul class="chat-list">
+        <li class="chat-item active">
+          <div class="avatar">AJ</div>
+          <div class="meta">
+            <div class="meta-top">
+              <span class="name">Anna Johnson</span>
+              <time>09:15 AM</time>
+            </div>
+            <div class="meta-bottom">
+              <p>Hey! How's it going today? I've be</p>
+              <span class="badge">4</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar">BC</div>
+          <div class="meta">
+            <div class="meta-top">
+              <span class="name">Brian Carter</span>
+              <time>09:22 AM</time>
+            </div>
+            <div class="meta-bottom">
+              <p>Can you help me figure this out? I've be</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar">CS</div>
+          <div class="meta">
+            <div class="meta-top">
+              <span class="name">Clara Smith</span>
+              <time>09:30 AM</time>
+            </div>
+            <div class="meta-bottom">
+              <p>OMG, you won't believe what just hap...</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar">DB</div>
+          <div class="meta">
+            <div class="meta-top">
+              <span class="name">David Brown</span>
+              <time>09:45 AM</time>
+            </div>
+            <div class="meta-bottom">
+              <p>Do you have a minute to talk? I've</p>
+              <span class="badge small">1</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- truncated list for brevity visually matches screenshot -->
+        <li class="chat-item">
+          <div class="avatar">HM</div>
+          <div class="meta">
+            <div class="meta-top">
+              <span class="name">Henry Moore</span>
+              <time>10:35 AM</time>
+            </div>
+            <div class="meta-bottom">
+              <p>Just checking in—how's everythin</p>
+              <span class="badge">5</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="chat-item">
+          <div class="avatar">IT</div>
+          <div class="meta">
+            <div class="meta-top">
+              <span class="name">Isabella Taylor</span>
+              <time>12:30 PM</time>
+            </div>
+            <div class="meta-bottom">
+              <p>Hey! How's it going today? I've been th</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CHAT -->
+    <main class="main-chat">
+      <header class="main-header">
+        <div class="title">
+          <h2>Sunday AI</h2>
+          <p class="subtitle">Chat with smartest AI—Experience the power of AI with us</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn-ghost">⚙️</button>
+          <button class="btn-ghost">🎁</button>
+        </div>
+      </header>
+
+      <section class="messages">
+        <div class="message-row user-msg">
+          <div class="msg-bubble user">
+            Hi Sunday AI, I want to create an image of "mountains in the morning with fog." Can you help?
+            <div class="msg-meta">
+              <span class="time">15:08</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-row ai-msg">
+          <div class="ai-avatar-dot"></div>
+          <div class="msg-bubble ai">
+            Of course! Here's the concept I'll use:
+            <br><br>
+            - Theme: Mountains in the morning.
+            <br>
+            - Details: Fog covering the slopes, an orange-golden sky, and lush green trees.
+            <br>
+            - Style: Realistic or semi-illustrative? Do you have any additional preferences?
+            <div class="msg-actions">
+              <button class="icon-btn" aria-label="like">👍</button>
+              <button class="icon-btn" aria-label="dislike">👎</button>
+            </div>
+            <div class="msg-meta">
+              <span class="time">15:09</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-row user-msg center">
+          <div class="msg-bubble user small">
+            Let's go with semi-illustrative. Also, add some small birds in the sky.
+            <div class="msg-meta">
+              <span class="time">15:10</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="message-row ai-msg">
+          <div class="ai-avatar-dot"></div>
+          <div class="msg-bubble ai">
+            Got it! I'll create an image with mountains in the morning, fog covering the landscape, an orange sky, and small birds flying in the distance, in a semi-illustrative style.
+            <div class="msg-actions">
+              <button class="icon-btn" aria-label="like">👍</button>
+              <button class="icon-btn" aria-label="dislike">👎</button>
+            </div>
+            <div class="msg-meta">
+              <span class="time">15:11</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="composer">
+        <div class="composer-left">
+          <button class="composer-icon" aria-label="attach">📎</button>
+          <button class="composer-icon" aria-label="mic">🎤</button>
+        </div>
+        <input class="composer-input" placeholder="Let's ask Sunday AI.." />
+        <button class="composer-send">✳️</button>
+      </footer>
+    </main>
+
+    <!-- RIGHT PANEL BOT -->
+    <aside class="bot-panel">
+      <div class="bot-card">
+        <!-- robot avatar (SVG inline) -->
+        <div class="robot-avatar" aria-hidden="true">
+          <!-- simple robot svg -->
+          <svg viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+            <rect rx="18" ry="18" x="10" y="10" width="100" height="100" fill="#2f6fb8"/>
+            <rect rx="14" ry="14" x="26" y="26" width="68" height="68" fill="#6fb3ff"/>
+            <circle cx="48" cy="54" r="8" fill="#ffb86b"/>
+            <circle cx="72" cy="54" r="8" fill="#ffb86b"/>
+            <rect x="40" y="74" width="40" height="6" rx="3" fill="#1b2a43"/>
+          </svg>
+        </div>
+
+        <div class="bot-status">
+          <p class="listening">🎙️ Listening...</p>
+          <p class="help-text">How can I help you today?</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>

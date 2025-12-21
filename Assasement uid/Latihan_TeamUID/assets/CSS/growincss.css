@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  min-height: 100vh;
+}
+
+
+
+.sidebar {
+  border-right: 1px solid #ddd;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: #7a5af8;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #333;
+  padding: 0.8rem 0.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s; 
+}
+
+.sidebar nav a:hover {
+  background: #f3f0ff;
+  color: #7a5af8;
+}
+
+.badge {
+  background: #7a5af8;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-size: 10px;
+  margin-left: auto;
+}
+
+.btn {
+  background: #7a5af8;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+.main-content {
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.post-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.post-box img {
+  width: 35px;
+  height: 35px;
+  background: #c3d9fe;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.post-box input {
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+
+.posts {
+  margin-top: 1rem;
+}
+
+.post-avatar {
+  width: 35px;
+  height: 35px;
+  background: #c3d9fe;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.post {
+  display: flex;
+  gap: 10px;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.post-link{
+  text-decoration: none;
+}
+
+.post h4 {
+  font-size: 0.9rem;
+}
+
+.post span {
+  color: gray;
+  font-weight: normal;
+}
+
+.post p {
+  margin: 6px 0;
+}
+
+.post-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 6px;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+
+.rightbar {
+  /* Background Putih */
+  background-color: white;
+  /* Font Hitam */
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rewards-title {
+  color: #000;
+  margin-top: 0;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.rewards-description {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+
+/* --- REWARDS ITEM STYLING --- */
+.rewards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Jarak antar item lebih rapat */
+}
+
+.leaderboard-item {
+  /* Gaya blok putih dengan border abu-abu */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.2s ease;
+}
+
+.leaderboard-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rank-info {
+  display: flex;
+  align-items: center;
+  /* Merapikan rank number dan username */
+}
+
+.rank-number {
+  font-weight: 700;
+  color: #000;
+  font-size: 1.1em;
+  min-width: 40px;
+  /* Menjaga lebar kolom rank tetap konsisten */
+  margin-right: 15px;
+}
+
+.username-acc {
+  font-weight: 600;
+  /* Username lebih tebal */
+  color: #000;
+  font-size: 1em;
+  /* Teks username menggantikan label 'place' */
+}
+
+.reward-amount {
+  font-weight: 700;
+  font-size: 1.3em;
+  color: #000;
+}
+
+/* Specific styling for Top 3 (menambahkan highlight warna) */
+.rank-1 {
+  border: 2px solid gold;
+  background-color: #fffaf0;
+  /* Sedikit latar belakang kuning muda */
+}
+
+.rank-2 {
+  border: 2px solid silver;
+}
+
+.rank-3 {
+  border: 2px solid #cd7f32;
+  /* Bronze color */
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .sidebar nav a span,
+  .logo,
+  .rightbar {
+    display: none;
+  }
+
+  .sidebar nav a {
+    justify-content: center;
+  }
+
+  .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main-content {
+    margin-bottom: 60px;
+  }
+
+  .rightbar {
+    display: none;
+  }
+}

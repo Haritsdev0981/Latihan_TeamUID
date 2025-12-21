@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, Arial, sans-serif
+}
+
+body {
+    background: #f4f3f6
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    max-width: 1400px;
+    margin: auto;
+    min-height: 100vh
+}
+
+.sidebar {
+    background: #fff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #ff914d
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 12px;
+    color: #333;
+    margin-bottom: 6px
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background: #f1f1f1
+}
+
+.post-btn {
+    margin-top: auto;
+    padding: 14px;
+    border: none;
+    border-radius: 999px;
+    background: #ff914d;
+    color: #fff;
+    font-weight: 600
+}
+
+.content {
+    padding: 32px
+}
+
+.title {
+    margin-bottom: 20px
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-bottom: 16px
+}
+
+.filters select {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd
+}
+
+.rank-card {
+    background: linear-gradient(90deg, #ff914d, #ff6a3d);
+    color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px
+}
+
+.rank-left {
+    display: flex;
+    align-items: center;
+    gap: 16px
+}
+
+.rank-number {
+    font-size: 32px;
+    font-weight: 700
+}
+
+.rank-label {
+    font-size: 12px;
+    opacity: .9
+}
+
+.rank-name {
+    font-weight: 600
+}
+
+.rank-points {
+    font-weight: 600
+}
+
+.table {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden
+}
+
+.table-head,
+.row {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px;
+    padding: 14px 20px;
+    align-items: center
+}
+
+.table-head {
+    font-size: 13px;
+    color: #777;
+    border-bottom: 1px solid #eee
+}
+
+.row {
+    border-bottom: 1px solid #f1f1f1
+}
+
+.row:last-child {
+    border: none
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%
+}
+
+.right {
+    text-align: right
+}
+
+@media(max-width:900px) {
+    .app {
+        grid-template-columns: 1fr
+    }
+
+    .sidebar {
+        display: none
+    }
+}
+
+@media(max-width:600px) {
+
+    .table-head,
+    .row {
+        grid-template-columns: 50px 1fr 80px;
+        padding: 12px
+    }
+
+    .rank-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px
+    }
+}
