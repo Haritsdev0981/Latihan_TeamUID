@@ -194,8 +194,6 @@ html, body {
     font-size: 20px;
     cursor: pointer;
     color: var(--text-primary);
-    display: flex;
-    align-items: center;
 }
 
 .top-header h1 {

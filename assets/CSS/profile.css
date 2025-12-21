@@ -329,6 +329,12 @@ body {
   color: var(--text-primary)
 }
 
+.mutual-tab{
+  padding-top: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
 .profile-tabs {
   display: flex;
   gap: 24px;

@@ -253,11 +253,11 @@ body{
 }
 
 .back-btn{
-    background:none;
-    border:none;
-    font-size:20px;
-    cursor:pointer;
-    color:var(--text-primary)
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-primary);
 }
 
 .top-header h1{
