@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
+
     <div class="layout">
         <aside class="sidebar-left">
             <div class="logo">
                 <i class="fa-solid fa-message logo-icon"></i>
                 <span>Glow-in</span>
             </div>
-        
+            <label for="menu-toggle" class="close-btn" aria-label="Tutup Menu">
+                <i class="fas fa-times"></i>
+            </label>
+
+
             <nav class="nav-menu">
                 <a href="#" class="nav-item">
                     <i class="fa-solid fa-house"></i>
@@ -47,7 +55,8 @@
             </nav>
             <button class="post-btn">Post</button>
             <div class="user-profile-mini">
-                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" alt="Profile" class="avatar-mini">
+                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                    alt="Profile" class="avatar-mini">
                 <div class="user-info-mini">
                     <div class="name">PSD Zone</div>
                     <div class="handle">@psd_zone.</div>
@@ -58,18 +67,23 @@
 
         <main class="main-content">
             <header class="top-header">
-                <button class="back-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <label for="menu-toggle" class="menu-toggle-btn" aria-label="Buka Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
                 <h1>Profile</h1>
             </header>
 
             <div class="container">
                 <div class="profile-card">
                     <div class="profile-cover">
-                        <img src="https://images.unsplash.com/photo-1505839673365-e3971f8d9184?auto=format&fit=crop&w=1400&q=80" alt="Cover">
+                        <img src="https://images.unsplash.com/photo-1505839673365-e3971f8d9184?auto=format&fit=crop&w=1400&q=80"
+                            alt="Cover">
                     </div>
                     <div class="profile-inner">
                         <div class="profile-header">
-                            <img class="avatar-large" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" alt="Avatar">
+                            <img class="avatar-large"
+                                src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                                alt="Avatar">
                             <div class="profile-info">
                                 <div class="profile-name-row">
                                     <span class="profile-name">PSD Zone</span>
@@ -82,9 +96,10 @@
                                 <button class="btn btn-follow">Follow</button>
                             </div>
                         </div>
-    
+
                         <p class="profile-bio">
-                            Download Free Exclusive PSD Files, PSD graphics, PSD templates, PSD backgrounds and many Photoshop resources.
+                            Download Free Exclusive PSD Files, PSD graphics, PSD templates, PSD backgrounds and many
+                            Photoshop resources.
                         </p>
                         <div class="profile-meta">
                             <span><i class="fa-regular fa-calendar"></i> Joined August 2022</span>
@@ -94,7 +109,7 @@
                             <span><span class="count">2,114</span> Following</span>
                             <span><span class="count">98,400</span> Followers</span>
                         </div>
-    
+
                         <div class="profile-tabs">
                             <a href="#" class="profile-tab active">Tweets</a>
                             <a href="#" class="profile-tab">Tweets & replies</a>
@@ -103,19 +118,22 @@
                         </div>
                     </div>
                 </div>
-            
+
 
                 <article class="tweet-card">
                     <div class="post-header">
-                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" class="avatar" alt="PSD Zone">
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                            class="avatar" alt="PSD Zone">
                         <div class="post-user-info">
                             <div class="name">PSD Zone</div>
                             <div class="handle">@psd_zone • 2h</div>
                         </div>
                     </div>
-                    <p class="post-body">Discover our latest collection of vibrant abstract backgrounds, perfect for your next design project.</p>
+                    <p class="post-body">Discover our latest collection of vibrant abstract backgrounds, perfect for
+                        your next design project.</p>
                     <div class="tweet-media">
-                        <img src="https://i.pinimg.com/736x/c8/3d/fe/c83dfed69dcdb4d5cd385d90c4fbe0e6.jpg" alt="Abstract pack">
+                        <img src="https://i.pinimg.com/736x/c8/3d/fe/c83dfed69dcdb4d5cd385d90c4fbe0e6.jpg"
+                            alt="Abstract pack">
                     </div>
                     <div class="tweet-actions">
                         <div class="item"><i class="fa-regular fa-heart"></i><span>770</span></div>
@@ -127,15 +145,18 @@
 
                 <article class="tweet-card">
                     <div class="post-header">
-                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80" class="avatar" alt="PSD Zone">
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                            class="avatar" alt="PSD Zone">
                         <div class="post-user-info">
                             <div class="name">PSD Zone</div>
                             <div class="handle">@psd_zone • 1d</div>
                         </div>
                     </div>
-                    <p class="post-body">New free PSD mockups templates available. Present your designs professionally with these easy-to-use files.</p>
+                    <p class="post-body">New free PSD mockups templates available. Present your designs professionally
+                        with these easy-to-use files.</p>
                     <div class="tweet-media">
-                        <img src="https://i.pinimg.com/1200x/d9/d1/0f/d9d10f36ebaab4293f982bb5b934af1f.jpg" alt="Mockup pack">
+                        <img src="https://i.pinimg.com/1200x/d9/d1/0f/d9d10f36ebaab4293f982bb5b934af1f.jpg"
+                            alt="Mockup pack">
                     </div>
                     <div class="tweet-actions">
                         <div class="item"><i class="fa-regular fa-heart"></i><span>310</span></div>
@@ -152,27 +173,32 @@
                 <h3>Leaderboard</h3>
                 <ul class="leaderboard-list">
                     <li class="leaderboard-item">
-                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="LunaStar">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="LunaStar">
                         <span class="name">LunaStar</span>
                         <span class="points">1250 pts</span>
                     </li>
                     <li class="leaderboard-item">
-                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="PixelForge">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="PixelForge">
                         <span class="name">PixelForge</span>
                         <span class="points">1180 pts</span>
                     </li>
                     <li class="leaderboard-item">
-                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="CodeWhisper">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="CodeWhisper">
                         <span class="name">CodeWhisper</span>
                         <span class="points">1020 pts</span>
                     </li>
                     <li class="leaderboard-item">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="DesignFlow">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="DesignFlow">
                         <span class="name">DesignFlow</span>
                         <span class="points">950 pts</span>
                     </li>
                     <li class="leaderboard-item">
-                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="DataPilot">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="DataPilot">
                         <span class="name">DataPilot</span>
                         <span class="points">880 pts</span>
                     </li>
@@ -181,5 +207,8 @@
             </div>
         </aside>
     </div>
+
+    <label for="menu-toggle" id="overlay"></label>
 </body>
+
 </html>
