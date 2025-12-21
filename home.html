@@ -10,94 +10,163 @@
 </head>
 
 <body>
-
     <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
 
-    <div id="app-container">
-        <aside id="leftbar">
-            <div class="leftbar-header">
-                <div class="logo">Glow-in</div>
-                <label for="menu-toggle" class="close-btn" aria-label="Tutup Menu">
-                    <i class="fas fa-times"></i>
-                </label>
+    <div class="layout">
+        <aside class="sidebar-left">
+            <div class="logo">
+                <i class="fa-solid fa-message logo-icon"></i>
+                <span>Glow-in</span>
             </div>
+            <label for="menu-toggle" class="close-btn" aria-label="Tutup Menu">
+                <i class="fas fa-times"></i>
+            </label>
 
-            <nav class="leftbar-nav">
-                <ul>
-                    <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fas fa-compass"></i> Explore</a></li>
-                    <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
-                    <li><a href="#"><i class="fas fa-trophy"></i> Leaderboard</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
-                </ul>
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-item active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="notification.html" class="nav-item">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">20+</span>
+                    </div>
+                    <span>Notifications</span>
+                </a>
+                <a href="chat.html" class="nav-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Leaderboard</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
             </nav>
             <button class="post-btn">Post</button>
 
-            <div class="leftbar-footer">
-                <i class="fas fa-circle-user user-avatar-icon"></i>
-                <div class="user-info">
-                    <div class="username">xuzi kolo</div>
-                    <div class="handle">@trishaaaaa</div>
+            <div class="user-profile-mini">
+                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                    alt="Profile" class="avatar-mini">
+                <div class="user-info-mini">
+                    <div class="name">PSD Zone</div>
+                    <div class="handle">@psd_zone.</div>
                 </div>
+                <i class="fa-solid fa-ellipsis menu-dots"></i>
             </div>
         </aside>
 
-        <main id="main-content">
-            <header class="main-header">
+        <main class="main-content">
+            <header class="top-header">
                 <label for="menu-toggle" class="menu-toggle-btn" aria-label="Buka Menu">
-                    <i class="fas fa-bars"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </label>
-
-                <nav class="main-nav-tabs">
+                <div class="main-nav-tabs">
                     <a href="#" class="tab active">For you</a>
                     <a href="#" class="tab">Folowing</a>
-                </nav>
+                </div>
             </header>
-            <section class="feed">
-                <article class="post">
+
+            <div class="container">
+                <article class="tweet-card">
                     <div class="post-header">
-                        <img class="post-header-profile" src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img-profile">
-                        <div class="post-header-content">
-                            <span class="username">Harold</span>
-                            <span class="handle">@harold</span>
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                            class="avatar" alt="PSD Zone">
+                        <div class="post-user-info">
+                            <div class="name">PSD Zone</div>
+                            <div class="handle">@psd_zone • 2h</div>
                         </div>
-                        <span class="timestamp">5m</span>
                     </div>
-                    <p class="post-text">Vacation is going great! Loving the peace and quiet. 🌴 Sometimes it's the
-                        simple moments that bring the most joy. Remember to take a break and recharge your mind.
-                        #MentalWellness #SelfCare</p>
-                    <div class="post-media-placeholder"></div>
-                    <div class="post-actions">
-                        <span><i class="fa-regular fa-comment"></i> 12</span>
-                        <span><i class="fa-regular fa-heart"></i> 34</span>
-                        <span><i class="fa-solid fa-share-nodes"></i> 10</span>
-                        <span><i class="fa-regular fa-bookmark"></i> 7</span>
+                    <p class="post-body">Discover our latest collection of vibrant abstract backgrounds, perfect for
+                        your next design project.</p>
+                    <div class="tweet-media">
+                        <img src="https://i.pinimg.com/736x/c8/3d/fe/c83dfed69dcdb4d5cd385d90c4fbe0e6.jpg"
+                            alt="Abstract pack">
+                    </div>
+                    <div class="tweet-actions">
+                        <div class="item"><i class="fa-regular fa-heart"></i><span>770</span></div>
+                        <div class="item"><i class="fa-regular fa-comment"></i><span>67</span></div>
+                        <div class="item"><i class="fa-solid fa-retweet"></i><span>159</span></div>
+                        <div class="item"><i class="fa-solid fa-share-nodes"></i><span>12</span></div>
                     </div>
                 </article>
 
-                <article class="post">
+                <article class="tweet-card">
                     <div class="post-header">
-                        <img class="post-header-profile" src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img-profile">
-                        <div class="post-header-content">
-                            <span class="username">Sophia Chen</span>
-                            <span class="handle">@sophia.c</span>
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                            class="avatar" alt="PSD Zone">
+                        <div class="post-user-info">
+                            <div class="name">PSD Zone</div>
+                            <div class="handle">@psd_zone • 1d</div>
                         </div>
-                        <span class="timestamp">1h</span>
                     </div>
-                    <p class="post-text">Just a reminder: You are enough. You are capable. You are loved. Keep shining
-                        brightly, Glow-in community! ✨ #PositiveVibes #DailyAffirmation</p>
-                    <div class="post-actions">
-                        <span><i class="fa-regular fa-comment"></i> 8</span>
-                        <span><i class="fa-regular fa-heart"></i> 21</span>
-                        <span><i class="fa-solid fa-share-nodes"></i> 6</span>
-                        <span><i class="fa-regular fa-bookmark"></i> 5</span>
+                    <p class="post-body">New free PSD mockups templates available. Present your designs professionally
+                        with these easy-to-use files.</p>
+                    <div class="tweet-actions">
+                        <div class="item"><i class="fa-regular fa-heart"></i><span>310</span></div>
+                        <div class="item"><i class="fa-regular fa-comment"></i><span>25</span></div>
+                        <div class="item"><i class="fa-solid fa-retweet"></i><span>98</span></div>
+                        <div class="item"><i class="fa-solid fa-share-nodes"></i><span>5</span></div>
                     </div>
                 </article>
                 
+                <article class="tweet-card">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                            class="avatar" alt="PSD Zone">
+                        <div class="post-user-info">
+                            <div class="name">PSD Zone</div>
+                            <div class="handle">@psd_zone • 1d</div>
+                        </div>
+                    </div>
+                    <p class="post-body">New free PSD mockups templates available. Present your designs professionally
+                        with these easy-to-use files.</p>
+                    <div class="tweet-actions">
+                        <div class="item"><i class="fa-regular fa-heart"></i><span>310</span></div>
+                        <div class="item"><i class="fa-regular fa-comment"></i><span>25</span></div>
+                        <div class="item"><i class="fa-solid fa-retweet"></i><span>98</span></div>
+                        <div class="item"><i class="fa-solid fa-share-nodes"></i><span>5</span></div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- <section class="feed">
                 <article class="post">
                     <div class="post-header">
-                        <img class="post-header-profile" src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img-profile">
+                        <img class="post-header-profile"
+                            src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="img-profile">
+                        <div class="post-header-content">
+                            <span class="username">Harold</span>
+                            <span class="handle">@harold</span>
+                        </div>
+                        <span class="timestamp">5m</span>
+                    </div>
+                    <p class="post-text">Vacation is going great! Loving the peace and quiet. 🌴 Sometimes it's the
+                        simple moments that bring the most joy. Remember to take a break and recharge your mind.
+                        #MentalWellness #SelfCare</p>
+                    <div class="post-media-placeholder"></div>
+                    <div class="post-actions">
+                        <span><i class="fa-regular fa-comment"></i> 12</span>
+                        <span><i class="fa-regular fa-heart"></i> 34</span>
+                        <span><i class="fa-solid fa-share-nodes"></i> 10</span>
+                        <span><i class="fa-regular fa-bookmark"></i> 7</span>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-header">
+                        <img class="post-header-profile"
+                            src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="img-profile">
                         <div class="post-header-content">
                             <span class="username">Sophia Chen</span>
                             <span class="handle">@sophia.c</span>
@@ -116,7 +185,30 @@
 
                 <article class="post">
                     <div class="post-header">
-                        <img class="post-header-profile" src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img-profile">
+                        <img class="post-header-profile"
+                            src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="img-profile">
+                        <div class="post-header-content">
+                            <span class="username">Sophia Chen</span>
+                            <span class="handle">@sophia.c</span>
+                        </div>
+                        <span class="timestamp">1h</span>
+                    </div>
+                    <p class="post-text">Just a reminder: You are enough. You are capable. You are loved. Keep shining
+                        brightly, Glow-in community! ✨ #PositiveVibes #DailyAffirmation</p>
+                    <div class="post-actions">
+                        <span><i class="fa-regular fa-comment"></i> 8</span>
+                        <span><i class="fa-regular fa-heart"></i> 21</span>
+                        <span><i class="fa-solid fa-share-nodes"></i> 6</span>
+                        <span><i class="fa-regular fa-bookmark"></i> 5</span>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <div class="post-header">
+                        <img class="post-header-profile"
+                            src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="img-profile">
                         <div class="post-header-content">
                             <span class="username">Harold</span>
                             <span class="handle">@harold</span>
@@ -134,10 +226,53 @@
                         <span><i class="fa-regular fa-bookmark"></i> 7</span>
                     </div>
                 </article>
-            </section>
+            </section> -->
         </main>
 
-        <aside id="rightbar">
+        <aside class="sidebar-right">
+            <div class="search-bar-desktop">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search Glow-in">
+            </div>
+            <div class="leaderboard-card">
+                <h3>Leaderboard</h3>
+                <ul class="leaderboard-list">
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="LunaStar">
+                        <span class="name">LunaStar</span>
+                        <span class="points">1250 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="PixelForge">
+                        <span class="name">PixelForge</span>
+                        <span class="points">1180 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="CodeWhisper">
+                        <span class="name">CodeWhisper</span>
+                        <span class="points">1020 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="DesignFlow">
+                        <span class="name">DesignFlow</span>
+                        <span class="points">950 pts</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                            alt="DataPilot">
+                        <span class="name">DataPilot</span>
+                        <span class="points">880 pts</span>
+                    </li>
+                </ul>
+                <a href="#" class="view-full">View Full Leaderboard</a>
+            </div>
+        </aside>
+
+        <!-- <aside id="rightbar">
             <div class="search-bar-desktop">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Search Glow-in">
@@ -168,7 +303,7 @@
                 </table>
                 <button class="view-leaderboard-btn">View Full Leaderboard</button>
             </div>
-        </aside>
+        </aside> -->
     </div>
 
     <label for="menu-toggle" id="overlay"></label>
