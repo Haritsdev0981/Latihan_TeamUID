@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -560,10 +560,11 @@ body {
     .main-content {
         flex: 1;
     }
-      .top-header {
-    /* Sesuaikan padding header untuk memberi ruang tombol */
-    padding-left: 16px;
-  }
+
+    .top-header {
+        /* Sesuaikan padding header untuk memberi ruang tombol */
+        padding-left: 16px;
+    }
 
     .menu-toggle-btn {
         display: block;
