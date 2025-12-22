@@ -137,6 +137,8 @@ body {
 }
 
 .post-btn {
+  display: flex;
+  justify-content: center;
   background-color: var(--accent-orange);
   color: #FFFFFF;
   border: none;
@@ -145,6 +147,7 @@ body {
   border-radius: 30px;
   font-weight: 700;
   font-size: 16px;
+  text-decoration: none;
   cursor: pointer;
   margin-bottom: 32px;
   box-shadow: 0 4px 12px rgba(245, 138, 66, .3);
