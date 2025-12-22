@@ -670,7 +670,7 @@ body {
 
   #menu-toggle:checked~#overlay {
     display: block;
-    /* Tampilkan Overlay */
+    background: none;
   }
 
   .container {
@@ -796,5 +796,9 @@ body {
     padding-top: 8px;
     border-top: 1px solid #eee;
     position: relative;
+  }
+  #menu-toggle:checked~#overlay {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);;
   }
 }

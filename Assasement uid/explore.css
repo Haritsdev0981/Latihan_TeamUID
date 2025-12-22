@@ -34,8 +34,8 @@ body {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  background: none;
   border: none;
+  margin-top: 5px;
   color: var(--text-primary);
 }
 
@@ -214,7 +214,7 @@ body {
 
 .top-header {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 16px;
   padding: 24px 40px;
   background-color: #FFFFFF;
@@ -245,6 +245,12 @@ body {
   margin-bottom: 12px;
 }
 
+.avatar-top {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .avatar {
   width: 48px;
   height: 48px;
