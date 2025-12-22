@@ -13,49 +13,34 @@
   <link rel="stylesheet" href="leaderboard.css" />
 </head>
 <body>
+<input type="checkbox" id="menu-toggle" class="hidden-checkbox">
 
 <div class="layout">
 
-  <!-- LEFT SIDEBAR (SAMA DENGAN PROFILE) -->
+  <!-- LEFT SIDEBAR (CHAT STRUCTURE) -->
   <aside class="sidebar-left">
     <div class="logo">
       <i class="fa-solid fa-message logo-icon"></i>
       <span>Glow-in</span>
     </div>
 
+    <label for="menu-toggle" class="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </label>
+
     <nav class="nav-menu">
-      <a href="#" class="nav-item">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
-      </a>
-
-      <a href="#" class="nav-item">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <span>Explore</span>
-      </a>
-
-      <a href="#" class="nav-item">
+      <a class="nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a class="nav-item"><i class="fa-solid fa-magnifying-glass"></i><span>Explore</span></a>
+      <a class="nav-item">
         <div class="icon-wrapper">
           <i class="fa-solid fa-bell"></i>
           <span class="badge">20+</span>
         </div>
         <span>Notifications</span>
       </a>
-
-      <a href="#" class="nav-item">
-        <i class="fa-regular fa-envelope"></i>
-        <span>Messages</span>
-      </a>
-
-      <a href="#" class="nav-item active">
-        <i class="fa-solid fa-chart-simple"></i>
-        <span>Leaderboard</span>
-      </a>
-
-      <a href="#" class="nav-item">
-        <i class="fa-regular fa-user"></i>
-        <span>Profile</span>
-      </a>
+      <a class="nav-item"><i class="fa-regular fa-envelope"></i><span>Messages</span></a>
+      <a class="nav-item active"><i class="fa-solid fa-chart-simple"></i><span>Leaderboard</span></a>
+      <a class="nav-item"><i class="fa-regular fa-user"></i><span>Profile</span></a>
     </nav>
 
     <button class="post-btn">Post</button>
@@ -72,7 +57,12 @@
 
   <!-- MAIN CONTENT -->
   <main class="content">
-    <h2 class="title">Global Leaderboard</h2>
+    <header class="mobile-header">
+      <label for="menu-toggle" class="menu-toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <h2>Global Leaderboard</h2>
+    </header>
 
     <div class="filters">
       <select><option>All Time</option></select>
@@ -102,15 +92,13 @@
       <div class="row"><span>3</span><span class="user"><img src="avatar.png">David Lee</span><span class="right">14,500</span></div>
       <div class="row"><span>4</span><span class="user"><img src="avatar.png">Sophia Chen</span><span class="right">13,800</span></div>
       <div class="row"><span>5</span><span class="user"><img src="avatar.png">Ethan Wright</span><span class="right">13,200</span></div>
-      <div class="row"><span>6</span><span class="user"><img src="avatar.png">Olivia King</span><span class="right">12,900</span></div>
-      <div class="row"><span>7</span><span class="user"><img src="avatar.png">Noah Clark</span><span class="right">12,550</span></div>
-      <div class="row"><span>8</span><span class="user"><img src="avatar.png">Ava Davis</span><span class="right">12,100</span></div>
-      <div class="row"><span>9</span><span class="user"><img src="avatar.png">Liam Scott</span><span class="right">11,800</span></div>
-      <div class="row"><span>10</span><span class="user"><img src="avatar.png">Isabella Hill</span><span class="right">11,500</span></div>
     </div>
   </main>
-
 </div>
 
+<label for="menu-toggle" id="overlay"></label>
 </body>
 </html>
+
+
+
