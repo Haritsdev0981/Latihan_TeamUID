@@ -1,93 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glow-in</title>
-  <link rel="stylesheet" href="explore.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow-in Explore</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="explore.css">
 </head>
+
 <body>
-  <div class="app">
+<input type="checkbox" id="menu-toggle" class="hidden-checkbox">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo">Glow-in</div>
-      <nav class="menu">
-        <a class="active">🏠 Home</a>
-        <a>🔍 Explore</a>
-        <a>🔔 Notifications <span class="badge">20+</span></a>
-        <a>✉️ Messages</a>
-        <a>📊 Leaderboard</a>
-        <a>👤 Profile</a>
-      </nav>
-      <button class="post-btn">Post</button>
-      <div class="profile">
-        <img src="https://i.pravatar.cc/40" />
-        <div>
-          <strong>xuzi kolo</strong>
-          <span>@rishaaaaa</span>
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar-left">
+    <div class="logo">
+      <i class="fa-solid fa-message logo-icon"></i>
+      <span>Glow-in</span>
+    </div>
+
+    <label for="menu-toggle" class="close-btn">
+      <i class="fas fa-times"></i>
+    </label>
+
+    <nav class="nav-menu">
+      <a class="nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a class="nav-item active"><i class="fa-solid fa-magnifying-glass"></i><span>Explore</span></a>
+      <a class="nav-item">
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-bell"></i>
+          <span class="badge">20+</span>
         </div>
-      </div>
-    </aside>
+        <span>Notifications</span>
+      </a>
+      <a class="nav-item"><i class="fa-regular fa-envelope"></i><span>Messages</span></a>
+      <a class="nav-item"><i class="fa-solid fa-chart-simple"></i><span>Leaderboard</span></a>
+      <a class="nav-item"><i class="fa-regular fa-user"></i><span>Profile</span></a>
+    </nav>
 
-    <!-- MAIN -->
-    <main class="feed">
-      <div class="composer">What's happening today?</div>
+    <button class="post-btn">Post</button>
+
+    <div class="user-profile-mini">
+      <img src="https://i.pravatar.cc/40" class="avatar-mini">
+      <div class="user-info-mini">
+        <div class="name">xuzi kolo</div>
+        <div class="handle">@rishaaaaa</div>
+      </div>
+      <i class="fa-solid fa-ellipsis menu-dots"></i>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <header class="top-header">
+      <label for="menu-toggle" class="menu-toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <h1>Explore</h1>
+    </header>
+
+    <div class="container">
 
       <!-- POST -->
-      <div class="card highlight">
-        <div class="card-header">
-          <img src="https://i.pravatar.cc/40?img=12" />
-          <div>
-            <strong>Willem Dafoe</strong>
-            <span>@willem.dafoe · 2h</span>
+      <article class="tweet-card">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/40?img=12" class="avatar">
+          <div class="post-user-info">
+            <div class="name">Willem Dafoe</div>
+            <div class="handle">@willem.dafoe · 2h</div>
           </div>
         </div>
-        <p>Going stars monopoly is go. Claim star share at 3. Let me quit you stars talent #goingstarsmonopoly</p>
-        <div class="actions">💬 5 ❤️ 9 🔁 8 🔖 3</div>
-      </div>
+
+        <p class="post-body">
+          Going stars monopoly is go. Claim star share at 3.
+        </p>
+
+        <div class="tweet-actions">
+          <div class="item"><i class="fa-regular fa-heart"></i><span>9</span></div>
+          <div class="item"><i class="fa-regular fa-comment"></i><span>5</span></div>
+          <div class="item"><i class="fa-solid fa-retweet"></i><span>8</span></div>
+          <div class="item"><i class="fa-solid fa-share-nodes"></i><span>3</span></div>
+        </div>
+      </article>
 
       <!-- POST IMAGE -->
-      <div class="card">
-        <div class="card-header">
-          <img src="https://i.pravatar.cc/40?img=5" />
-          <div>
-            <strong>Harold</strong>
-            <span>@harold · 5m</span>
+      <article class="tweet-card">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/40?img=5" class="avatar">
+          <div class="post-user-info">
+            <div class="name">Harold</div>
+            <div class="handle">@harold · 5m</div>
           </div>
         </div>
-        <p>Vacation is going great! Loving the peace and quiet 🌴</p>
-        <img class="post-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" />
-        <div class="actions">💬 12 ❤️ 34 🔁 10 🔖 7</div>
-      </div>
 
-      <!-- POST -->
-      <div class="card">
-        <div class="card-header">
-          <img src="https://i.pravatar.cc/40?img=32" />
-          <div>
-            <strong>Sophia Chen</strong>
-            <span>@sophia.c · 1h</span>
-          </div>
+        <p class="post-body">Vacation is going great! Loving the peace 🌴</p>
+
+        <div class="tweet-media">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
         </div>
-        <p>You are enough. You are capable. You are loved. ✨</p>
-        <div class="actions">💬 8 ❤️ 21 🔁 6 🔖 5</div>
-      </div>
-    </main>
 
-    <!-- RIGHTBAR -->
-    <aside class="rightbar">
+        <div class="tweet-actions">
+          <div class="item"><i class="fa-regular fa-heart"></i><span>34</span></div>
+          <div class="item"><i class="fa-regular fa-comment"></i><span>12</span></div>
+          <div class="item"><i class="fa-solid fa-retweet"></i><span>10</span></div>
+          <div class="item"><i class="fa-solid fa-share-nodes"></i><span>7</span></div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- RIGHT SIDEBAR -->
+  <aside class="sidebar-right">
+    <div class="leaderboard-card">
       <h3>Leaderboard</h3>
-      <ul>
-        <li>LunaStar <span>1250 pts</span></li>
-        <li>PixelForge <span>1180 pts</span></li>
-        <li>CodeWhisper <span>1020 pts</span></li>
-        <li>DesignFlow <span>950 pts</span></li>
-        <li>DataPlot <span>880 pts</span></li>
+      <ul class="leaderboard-list">
+        <li class="leaderboard-item">
+          <img src="https://i.pravatar.cc/40?img=1">
+          <span class="name">LunaStar</span>
+          <span class="points">1250 pts</span>
+        </li>
+        <li class="leaderboard-item">
+          <img src="https://i.pravatar.cc/40?img=2">
+          <span class="name">PixelForge</span>
+          <span class="points">1180 pts</span>
+        </li>
       </ul>
-    </aside>
+      <a href="#" class="view-full">View Full Leaderboard</a>
+    </div>
+  </aside>
 
-  </div>
+</div>
+
+<label for="menu-toggle" id="overlay"></label>
 </body>
 </html>
-

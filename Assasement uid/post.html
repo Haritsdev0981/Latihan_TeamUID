@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow-in | New Post</title>
+
+  <!-- ICON & FONT -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="post.css" />
+</head>
+
+<body>
+<input type="checkbox" id="menu-toggle" class="hidden-checkbox">
+
+<div class="layout">
+
+  <!-- LEFTBAR -->
+  <aside class="sidebar-left">
+    <div class="logo">
+      <i class="fa-solid fa-message logo-icon"></i>
+      <span>Glow-in</span>
+    </div>
+
+    <label for="menu-toggle" class="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </label>
+
+    <nav class="nav-menu">
+      <a class="nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a class="nav-item"><i class="fa-solid fa-magnifying-glass"></i><span>Explore</span></a>
+      <a class="nav-item">
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-bell"></i>
+          <span class="badge">20+</span>
+        </div>
+        <span>Notifications</span>
+      </a>
+      <a class="nav-item"><i class="fa-regular fa-envelope"></i><span>Messages</span></a>
+      <a class="nav-item"><i class="fa-solid fa-chart-simple"></i><span>Leaderboard</span></a>
+      <a class="nav-item active"><i class="fa-solid fa-pen-to-square"></i><span>Post</span></a>
+    </nav>
+
+    <button class="post-btn">Post</button>
+
+    <div class="user-profile-mini">
+      <img src="https://i.pravatar.cc/40" class="avatar-mini">
+      <div class="user-info-mini">
+        <div class="name">xuzi kolo</div>
+        <div class="handle">@rishaaaaa</div>
+      </div>
+      <i class="fa-solid fa-ellipsis menu-dots"></i>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <header class="top-header">
+      <label for="menu-toggle" class="menu-toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <h1>Create Post</h1>
+    </header>
+
+    <div class="container">
+
+      <div class="post-card">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/48?img=12" class="avatar">
+          <div>
+            <div class="name">John Doe</div>
+            <div class="handle">@john_doe</div>
+          </div>
+        </div>
+
+        <textarea class="post-textarea" placeholder="What's on your mind?"></textarea>
+
+        <div class="upload-box">
+          <i class="fa-regular fa-image"></i>
+          <span>Upload image</span>
+        </div>
+
+        <div class="post-actions">
+          <button class="btn cancel">Cancel</button>
+          <button class="btn submit">Post</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RIGHTBAR -->
+  <aside class="sidebar-right">
+    <div class="leaderboard-card">
+      <h3>Leaderboard</h3>
+      <ul class="leaderboard-list">
+        <li class="leaderboard-item">
+          <img src="https://i.pravatar.cc/32?img=1">
+          <span class="name">LunaStar</span>
+          <span class="points">1280 pts</span>
+        </li>
+        <li class="leaderboard-item">
+          <img src="https://i.pravatar.cc/32?img=2">
+          <span class="name">PixelForge</span>
+          <span class="points">1180 pts</span>
+        </li>
+      </ul>
+      <a href="#" class="view-full">View Full Leaderboard</a>
+    </div>
+  </aside>
+
+</div>
+
+<label for="menu-toggle" id="overlay"></label>
+</body>
+</html>

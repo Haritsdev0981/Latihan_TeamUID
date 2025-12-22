@@ -20,7 +20,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: var(--primary);
+  background-color: #ff8c00; 
   padding: 0rem 2rem;
   color: white;
   position: fixed;
@@ -79,7 +79,7 @@ body {
 
 /* Hero */
 .hero {
-  background-color: var(--primary);
+  background-color: #ff8c00; 
   color: white;
   text-align: center;
   padding: 11rem 1.5rem 0; /* Hilangkan padding bawah besar */
@@ -200,7 +200,7 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--primary);
+  background-color: #ff8c00; 
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -219,7 +219,7 @@ body {
 
 /* Footer */
 footer {
-  background-color: var(--primary);
+  background-color: #ff8c00; 
   color: white;
   padding: 2rem 1rem;
 }
