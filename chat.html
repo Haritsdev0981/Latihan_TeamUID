@@ -4,44 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat UI - Messages</title>
-  <link rel="stylesheet" href="/assets/CSS/chat.css">
+  <link rel="stylesheet" href="./assets/CSS/chat.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
 
-    <div id="app-container">
-        <aside id="leftbar">
-            <div class="leftbar-header">
-                <div class="logo">Glow-in</div>
-                <label for="menu-toggle" class="close-btn" aria-label="Tutup Menu">
-                    <i class="fas fa-times"></i>
-                </label>
+    <div class="layout"> 
+        <aside class="sidebar-left">
+            <div class="logo">
+                <i class="fa-solid fa-message logo-icon"></i>
+                <span>Glow-in</span>
             </div>
+            <label for="menu-toggle" class="close-btn" aria-label="Tutup Menu">
+                <i class="fas fa-times"></i>
+            </label>
 
-            <nav class="leftbar-nav">
-                <ul>
-                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="/Assasement uid/explore.html"><i class="fas fa-compass"></i> Explore</a></li>
-                    <li><a href="notification.html"><i class="fas fa-bell"></i> Notifications</a></li>
-                    <li class="active"><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
-                    <li><a href="/Assasement uid/leaderboard.css"><i class="fas fa-trophy"></i> Leaderboard</a></li>
-                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
-                </ul>
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="/Assasement uid/explore.html" class="nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="notification.html" class="nav-item">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">20+</span> 
+                    </div>
+                    <span>Notifications</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="/Assasement uid/leaderboard.html" class="nav-item">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Leaderboard</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
             </nav>
             <button class="post-btn">Post</button>
 
-            <div class="leftbar-footer">
-                <i class="fas fa-circle-user user-avatar-icon"></i>
-                <div class="user-info">
-                    <div class="username">xuzi kolo</div>
+            <div class="user-profile-mini">
+                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80"
+                    alt="Profile" class="avatar-mini">
+                <div class="user-info-mini">
+                    <div class="name">xuzi kolo</div>
                     <div class="handle">@trishaaaaa</div>
                 </div>
+                <i class="fa-solid fa-ellipsis menu-dots"></i>
             </div>
         </aside>
 
-        <main id="main-content">
+        <main class="main-content">
             <section class="messages-list-panel">
               <div class="main-header">
                 <label for="menu-toggle" class="menu-toggle-btn" aria-label="Buka Menu">
@@ -121,7 +143,7 @@
                         <div class="chat-name">Alice Johnson</div>
                         <div class="status">Online</div>
                     </div>
-                    <span class="more-icon">...</span>
+                    <span class="more-icon"><i class="fa-solid fa-ellipsis"></i></span>
                 </header>
 
                 <div class="conversation-area">

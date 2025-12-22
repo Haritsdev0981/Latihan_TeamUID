@@ -1,30 +1,24 @@
 :root {
-  /* Perbarui variabel warna agar sesuai dengan tampilan Glow-in */
-  --primary-color: #ff8c00;
-  /* Orange Glow-in */
-  --light-bg: #ffffff;
-  /* Putih */
-  --dark-text: #1a1a1a;
-  --light-gray: #f3efea;
-  /* Background utama Body/App */
-  --light-hover: #A0BBE2;
-  --panel-background: #ffffff;
-  /* Background Panel (List Chat & Header Chat) */
-  --background-chat: #fefcf9;
-  /* Background Conversation Area (Lebih terang dari body) */
-  --border-color: #e0e0e0;
-  --leftbar-width-desktop: 280px;
-  --rightbar-ai-width: 250px; /* Diperkirakan 250px agar lebih ramping, seperti Gambar 2 */
-
+  /* Variabel dari chat.css/growincss.css */
+  --bg-color: #F8F6F2;
+  --card-bg: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --accent-orange: #ff8c00;
+  --accent-green: #2ecc71;
+  --border-color: #E0E0E0;
+  --sidebar-width-left: 280px; /* Lebar Leftbar Baru */
+  
   /* Warna spesifik Chat */
   --incoming-message-bg: #ffffff;
-  --outgoing-message-bg: #ff6a00;
+  --outgoing-message-bg: var(--accent-orange);
   --outgoing-message-text: #ffffff;
-  --active-bg: #f8f8f8;
-  /* Background chat item terpilih */
+  --active-bg: #F4F7FE; /* Background item navigasi aktif */
   --text-medium: #888;
-  /* Warna teks abu-abu */
-  --active-border: var(--primary-color);
+  --background-chat: #fefcf9;
+  
+  --rightbar-ai-width: 320px; /* Lebar Rightbar AI disesuaikan */
 }
 
 /* Reset dan Styling Dasar */
@@ -32,12 +26,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--light-gray);
-  color: var(--dark-text);
+  background-color: #FFFFFF; /* Ganti background body menjadi putih */
+  color: var(--text-primary);
   height: 100vh;
   overflow: hidden;
 }
@@ -53,114 +47,156 @@ body {
   align-items: flex-end;
 }
 
-/* ==================== 1. APP CONTAINER & LEFTBAR (Sama) ==================== */
+/* ==================== 1. APP CONTAINER & LEFTBAR (BARU - Mengikuti chat.css) ==================== */
 
-#app-container {
+/* Ganti #app-container menjadi .layout dan gunakan Grid */
+.layout {
   display: grid;
-  /* Kita hapus max-width di app-container agar Leftbar bisa menempel ke kiri viewport */
-  grid-template-columns: var(--leftbar-width-desktop) 1fr var(--rightbar-ai-width);
+  grid-template-columns: var(--sidebar-width-left) 1fr var(--rightbar-ai-width);
+  max-width: 1600px;
+  margin: 0 auto;
   height: 100vh;
-  /* margin: 0 auto; -- Dihapus */
   position: relative;
   width: 100%;
-  /* Memenuhi lebar viewport */
 }
 
-#leftbar {
-  background-color: var(--light-bg);
-  border-right: 1px solid var(--border-color);
-  /* Gunakan posisi relatif ke grid di dalam #app-container */
-  position: relative;
-  /* left: 0; top: 0; width: var(--leftbar-width-desktop); height: 100vh; dihapus karena sudah diatur oleh grid */
-  padding: 20px;
+.sidebar-left { /* Mengganti #leftbar */
+  width: var(--sidebar-width-left);
+  background-color: var(--card-bg);
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  z-index: 100;
+  height: 100vh;
+  position: relative;
+  z-index: 1000;
+  transition: transform 0.3s ease-out;
+  border-right: 1px solid var(--border-color);
   grid-column: 1;
-  /* Diatur oleh Grid */
 }
 
-/* Styling Leftbar (biarkan sesuai dengan revisi sebelumnya) */
+/* Logo */
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-.leftbar-header {
-  margin-bottom: 30px;
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-.leftbar-nav ul {
-  list-style: none;
-}
-
-.leftbar-nav li {
-  margin-bottom: 10px;
-}
-
-.leftbar-nav a {
   display: flex;
   align-items: center;
-  padding: 12px 15px;
-  border-radius: 30px;
-  font-size: 16px;
-  text-decoration: none;
-  color: inherit;
-  transition: background-color 0.2s;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent-orange);
+  margin-bottom: 40px;
 }
 
-.leftbar-nav a i {
-  margin-right: 15px;
-  width: 20px;
+.logo-icon {
+  font-size: 28px;
 }
 
-.leftbar-nav li.active a {
-  background-color: color-mix(in srgb, var(--light-hover) 20%, transparent);
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-.leftbar-nav a:hover {
-  background-color: color-mix(in srgb, var(--light-hover) 20%, transparent);
-  color: var(--primary-color);
-}
-
-.post-btn {
-  background-color: var(--primary-color);
-  color: var(--light-bg);
-  border: none;
-  padding: 12px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 100%;
-}
-
-
-.leftbar-footer {
-    margin-top: auto;
-    padding-top: 15px;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-}
-.user-avatar-icon { 
-    font-size: 40px; 
-    margin-right: 10px;
-    color: #ccc;
-}
-.leftbar-footer .username { font-weight: bold; font-size: 14px; }
-.leftbar-footer .handle { font-size: 12px; color: #888; }
-
-.menu-toggle-btn, .close-btn { 
+.close-btn { /* Untuk mobile */
     display: none;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: var(--text-tertiary);
 }
+
+/* Navigasi */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 0px;
+  text-decoration: none;
+  color: #4A4A4A;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px;
+  transition: color .2s, background-color .2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: var(--active-bg);
+  padding-left: 16px;
+  color: var(--text-primary);
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+/* Badge (20+ Notifications) */
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: 2px solid var(--card-bg);
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* Tombol Post */
+.post-btn {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(245, 138, 66, .3);
+}
+
+/* User Profile Mini */
+.user-profile-mini { 
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: auto;
+  background-color: #F8F9FA;
+}
+
+.avatar-mini {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info-mini {
+  flex: 1;
+}
+
+.user-info-mini .name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-info-mini .handle {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.menu-dots {
+  color: var(--text-tertiary);
+}
+
+/* ==================== 2. MAIN CONTENT AI CHAT (Kolom 2) ==================== */
 
 #main-content-ai-chat {
     padding: 0;
@@ -170,7 +206,7 @@ body {
     display: flex; 
     flex-direction: column;
     background-color: var(--background-chat);
-    border-right: 1px solid var(--border-color); /* Border pemisah ke Rightbar AI */
+    border-right: 1px solid var(--border-color); 
 }
 
 .chat-view-full {
@@ -182,20 +218,21 @@ body {
 
 /* Header Chat AI */
 .chat-header {
-    background-color: var(--panel-background);
+    background-color: var(--card-bg);
     padding: 15px 25px;
     border-bottom: 1px solid var(--border-color);
     display: flex;
-    flex-direction: column; /* Menggunakan flex-direction column untuk memisahkan back link dan profile info */
+    flex-direction: column; 
     flex-shrink: 0;
 }
 
 .back-col{
-    width: 40px;
+    width: 30px; /* Ukuran kolom back link disesuaikan */
+    flex-shrink: 0;
 }
 
 .back-link {
-    color: var(--dark-text);
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 20px;
     margin: auto auto;
@@ -224,9 +261,15 @@ body {
 }
 
 .chat-profile-info .avatar.online::after {
+    content: '';
+    position: absolute;
     bottom: 0;
     right: 0;
-    border: 2px solid var(--panel-background);
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-green);
+    border: 2px solid var(--card-bg);
+    border-radius: 50%;
 }
 
 .chat-header-info .chat-name {
@@ -235,13 +278,13 @@ body {
 }
 .chat-header-info .status {
     font-size: 12px;
-    color: #4CAF50;
+    color: var(--accent-green);
 }
 
 .more-icon {
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
-    color: var(--text-medium);
+    color: var(--text-tertiary);
     margin-left: auto; 
 }
 
@@ -257,9 +300,6 @@ body {
 
 /* Pesan */
 .message {
-    /* Hapus max-width dari sini */
-    padding: 0;
-    border-radius: 0;
     font-size: 15px;
     line-height: 1.4;
     position: relative;
@@ -269,9 +309,9 @@ body {
 .message.incoming {
     align-self: flex-start;
     display: flex;
-    align-items: flex-end; /* Avatar sejajar dengan bawah pesan */
+    align-items: flex-end; 
     gap: 10px;
-    max-width: 65%; /* Batasan pesan masuk */
+    max-width: 65%; 
 }
 
 .message.incoming p {
@@ -287,25 +327,18 @@ body {
 
 .message.incoming .avatar-message {
   width: 35px;
-  /* Ukuran avatar sedikit diperbesar */
   height: 35px;
   background-color: #c0c0c0;
   border-radius: 50%;
   flex-shrink: 0;
   align-self: flex-end;
-  /* Avatar rata bawah */
   order: -1;
-  /* Pindahkan avatar ke kiri */
 }
 
-/* Penempatan Waktu di Pesan Masuk */
 .message.incoming .time {
-  color: var(--text-medium);
-  /* align-self: flex-start; */
-  /* Rata kiri dari bubble */
+  color: var(--text-tertiary);
   font-size: 10px;
   order: 1;
-  /* Pindahkan waktu ke kanan bubble */
   margin-top: 0;
 }
 
@@ -314,7 +347,6 @@ body {
   align-self: flex-end;
   display: flex;
   flex-direction: column;
-  /* Atur bubble dan waktu terpisah */
   align-items: flex-end;
 }
 
@@ -323,16 +355,13 @@ body {
   color: var(--outgoing-message-text);
   border-radius: 12px;
   border-top-right-radius: 3px;
-  /* Sudut Lancip */
   padding: 10px 15px;
   margin-bottom: 5px;
-  /* Jarak antara bubble dan waktu */
   max-width: 100%;
 }
 
 .message.outgoing .time {
-  color: var(--text-medium);
-  /* Warna waktu di bawah bubble keluar */
+  color: var(--text-tertiary);
   margin-top: 0;
 }
 
@@ -342,7 +371,7 @@ body {
 
 
 .message-input-area {
-  background-color: var(--panel-background);
+  background-color: var(--card-bg);
   padding: 15px 25px;
   border-top: 1px solid var(--border-color);
   display: flex;
@@ -357,12 +386,12 @@ body {
   border-radius: 20px;
   font-size: 14px;
   margin-right: 10px;
-  background-color: var(--light-gray);
+  background-color: var(--bg-color);
   outline: none;
 }
 
 .send-button {
-  background-color: var(--primary-color);
+  background-color: var(--accent-orange);
   color: white;
   border: none;
   width: 40px;
@@ -379,7 +408,7 @@ body {
 /* ==================== 3. RIGHTBAR AI DETAIL (Kolom 3) ==================== */
 
 #rightbar-ai {
-    background-color: var(--panel-background);
+    background-color: var(--card-bg);
     border-left: 1px solid var(--border-color);
     padding: 40px 20px;
     grid-column: 3;
@@ -401,15 +430,17 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #f0f0f0;
     overflow: hidden;
     margin-bottom: 5px;
 }
-.ai-avatar-large img {
+
+.avatar-placeholder { /* Ganti styling avatar besar di sini */
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-color: #c0c0c0;
+    border-radius: 50%;
 }
+
 
 .ai-name {
     font-size: 20px;
@@ -417,7 +448,7 @@ body {
 }
 
 .ai-status {
-    color: #4CAF50; /* Hijau */
+    color: var(--accent-green); 
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -428,7 +459,7 @@ body {
 }
 
 .ai-metric {
-    color: var(--text-medium);
+    color: var(--text-tertiary);
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -436,36 +467,69 @@ body {
     margin-top: 10px;
 }
 
-/* ==================== MEDIA QUERY (Mobile) ==================== */
+/* ==================== MEDIA QUERY (RESPONSIVE) - Mengikuti 1100px ==================== */
+@media (max-width: 1100px) { 
 
-@media (max-width: 900px) {
-    #app-container {
-        grid-template-columns: 1fr;
+    /* Struktur Layout Mobile */
+    .layout {
+      grid-template-columns: 1fr;
     }
-
-    #leftbar {
-        display: none;
+  
+    /* Leftbar Overlay Logic */
+    .sidebar-left { 
+      width: 280px;
+      position: fixed;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+      padding: 32px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      border-right: none; 
     }
     
+    .close-btn {
+      display: block;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      color: var(--text-tertiary);
+    }
+  
+    #menu-toggle:checked ~ .layout .sidebar-left {
+      transform: translateX(0);
+    }
+      
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 900;
+      display: none;
+    }
+    
+    #menu-toggle:checked ~ #overlay {
+        display: block; 
+    }
+    
+    /* Header dan Main Content Mobile */
     #main-content-ai-chat {
-        grid-column: 1;
-        /* Di mobile, rightbar ai juga harus disembunyikan/dijadikan overlay */
-        border-right: none;
+      grid-column: 1;
+      border-right: none;
     }
     
     #rightbar-ai {
-        display: none; /* Sembunyikan Rightbar AI di mobile */
+        display: none; 
     }
     
     .chat-header {
-        padding: 10px 15px;
-    }
-    .back-link {
-        margin-bottom: 5px;
+        padding: 15px 20px;
     }
 
-    .message.incoming, .message.outgoing {
-        max-width: 85%;
+    .conversation-area {
+        padding: 20px;
     }
 }
-
